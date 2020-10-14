@@ -1,1 +1,53 @@
-$color: red;
+// Common
+$golden: 1.333 !default;
+
+
+// Fonts
+$font-family: 'Rubik', 'Arial', sans-serif;
+
+$font-size-common: 16px;
+$font-family-common: 'Montserrat', 'Arial', sans-serif;
+$font-weight-common: 300;
+$font-weight-headings: 400;
+
+
+// Grid
+$breakpoints: (
+  xs: 0px,
+  sm: 586px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+
+// Brand
+$brand-blue: #00baff;
+$brand-gray: #dddddd;
+$brand-darkgray: #071F27;
+$brand-white: #ffffff;
+
+
+
+// Backgrounds
+$background-color: $brand-white;
+
+
+// Headings
+$headings-color: $brand-darkgray;
+$headings-line-height: 1.2;
+
+$h2-font-size: 28px;
+$h3-font-size: 18px;
+$h4-font-size: 18px;
+$h5-font-size: 14px;
+
+
+// Animation
+$transition-time: 100ms;
+$transition-function: ease-in-out;
+
+
+
+// Overrides
+$primary: $brand-blue;

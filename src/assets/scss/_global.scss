@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  height: 100%;
+
+  background-color: $background-color;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
+
+  margin: 0;
+  padding: 0;
+  
+  font-size: $font-size-common;
+  font-weight: $font-weight-common;
+  font-family: $font-family-common;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  line-height: 1.25;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-headings;
+  color: inherit !important;
+  line-height: 1.2;
+}
+
+ul, ol {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+#root {
+  height: 100%;
+}

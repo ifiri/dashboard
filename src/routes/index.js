@@ -1,8 +1,10 @@
+import loadable from '@loadable/component';
+
 const routes = [
   {
-    path: '/audience',
-    component: () =>
-      import(/* webpackChunkName: "audience" */ '@/components/screen/Audience'),
+    path: '/audiences',
+    component: loadable(() => import(/* webpackChunkName: "audiences" */ '@/components/screen/Audience')),
+    exact: true,
   },
 ];
 
