@@ -1,0 +1,11 @@
+.header {
+  grid-area: header;
+
+  border-bottom: 1px solid $brand-gray;
+  padding: 26px 40px;
+}
+
+.title {
+  line-height: 1;
+  margin-bottom: 0;
+}

@@ -1,0 +1,12 @@
+.sidebar {
+  grid-area: sidebar;
+
+  padding: 25px 40px;
+
+  box-shadow: 4px 0px 10px 1px rgba(196, 196, 196, 0.4);
+}
+
+.nav {
+  margin-top: 25px;
+  flex-direction: column;
+}

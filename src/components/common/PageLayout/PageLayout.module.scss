@@ -1,0 +1,13 @@
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 1fr 100fr;
+
+  gap: 0px 40px;
+
+  grid-template-areas:
+    'sidebar header'
+    'sidebar content';
+
+  height: 100%;
+}

@@ -34,7 +34,6 @@ $background-color: $brand-white;
 
 
 // Headings
-$headings-color: $brand-darkgray;
 $headings-line-height: 1.2;
 
 $h2-font-size: 28px;
@@ -50,4 +49,11 @@ $transition-function: ease-in-out;
 
 
 // Overrides
+$font-family-base: $font-family;
+
 $primary: $brand-blue;
+
+$headings-font-weight: 400;
+$headings-color: $brand-darkgray;
+
+$h1-font-size: 22px;
