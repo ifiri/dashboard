@@ -14,8 +14,6 @@ export default function SidebarLink({ to, label, icon, iconWidth = 16 }) {
     [styles['is-active']]: !!match,
   });
 
-  const isLinkActive = true;
-
   return (
     <Link
       to={ to }

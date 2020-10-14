@@ -1,3 +1,5 @@
+export const SIDEBAR_LOGO_HEIGHT = 20;
+
 export const SIDEBAR_LINKS = [
   {
     label: 'Аккаунты',

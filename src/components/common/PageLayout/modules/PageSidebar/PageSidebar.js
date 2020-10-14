@@ -1,19 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 
 import Logo from '@/components/common/Logo';
 
 import SidebarLink from './modules/SidebarLink';
 
-import { SIDEBAR_LINKS } from './PageSidebar.constants';
+import {
+  SIDEBAR_LOGO_HEIGHT,
+  SIDEBAR_LINKS
+} from './PageSidebar.constants';
 
 import styles from './PageSidebar.module.scss';
 
 export default function PageSidebar() {
   return (
     <aside className={ styles.sidebar }>
-      <Logo height={ 20 } />
+      <Logo height={ SIDEBAR_LOGO_HEIGHT } />
 
       <Nav className={ styles.nav }>
         {

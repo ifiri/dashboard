@@ -6,7 +6,7 @@ import {
   Route,
 } from 'react-router-dom';
 
-import './assets/scss/index.scss';
+import '@/assets/scss/index.scss';
 
 import routes from '@/routes';
 
@@ -16,7 +16,7 @@ ReactDOM.render(
       <Switch>
         {
           routes.map((route, i) => (
-            <Route key={ `route-${i}` } {...route} />
+            <Route key={ `route-${i}` } { ...route } />
           ))
         }
       </Switch>
