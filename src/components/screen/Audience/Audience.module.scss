@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 40px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.bulk {
+  margin-left: 20px;
+}
+

@@ -17,7 +17,7 @@ body {
   
   font-size: $font-size-common;
   font-weight: $font-weight-common;
-  font-family: $font-family-common;
+  font-family: $font-family-base;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,6 +38,11 @@ ul, ol {
 
 p {
   margin-bottom: 1rem;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
 }
 
 #root {

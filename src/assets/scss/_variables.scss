@@ -6,7 +6,6 @@ $golden: 1.333 !default;
 $font-family: 'Rubik', 'Arial', sans-serif;
 
 $font-size-common: 16px;
-$font-family-common: 'Montserrat', 'Arial', sans-serif;
 $font-weight-common: 300;
 $font-weight-headings: 400;
 
@@ -24,6 +23,9 @@ $breakpoints: (
 // Brand
 $brand-blue: #00baff;
 $brand-gray: #dddddd;
+$gray-100: #FAFAFA;
+$gray-200: #CFCFCF;
+$gray-400: #929292;
 $brand-darkgray: #071F27;
 $brand-white: #ffffff;
 
@@ -57,3 +59,18 @@ $headings-font-weight: 400;
 $headings-color: $brand-darkgray;
 
 $h1-font-size: 22px;
+$input-border-color: $gray-400;
+
+$input-padding-y: rem(6px, $font-size-common);
+$input-padding-x: rem(10px, $font-size-common);
+$input-font-size: 14px;
+$input-font-weight: 300;
+$input-placeholder-color: $gray-400;
+
+$secondary: $gray-400;
+
+$btn-font-weight: $font-weight-common;
+
+$table-head-bg: $gray-100;
+$table-border-width: 0;
+$table-th-font-weight: 400;

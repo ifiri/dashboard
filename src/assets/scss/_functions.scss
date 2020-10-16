@@ -1,0 +1,9 @@
+@function rem($pixels, $base) {
+  @if unit($pixels) == 'px' {
+    $rems: ($pixels / $base) * 1rem;
+
+    @return $rems;
+  }
+  
+  @return $pixels;
+}

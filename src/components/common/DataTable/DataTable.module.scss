@@ -1,0 +1,11 @@
+.table {
+  font-size: 14px;
+}
+
+.table-head {
+  background-color: $table-head-bg;
+}
+
+.table-row {
+  border-bottom: 1px solid rgba($gray-200, .7);
+}

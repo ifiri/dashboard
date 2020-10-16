@@ -1,0 +1,21 @@
+.user {
+  font-weight: inherit;
+}
+
+.username {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.avatar {
+  border-radius: 50%;
+  object-position: center;
+  object-fit: cover;
+
+  width: 30px;
+  height: 30px;
+
+  margin-right: 10px;
+}
