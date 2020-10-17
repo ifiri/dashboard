@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import DataTable from '@/components/common/DataTable';
 
@@ -13,7 +13,15 @@ const TABLE_COLUMNS = {
 };
 
 export default function UsersTable({ items = [], ...rest}) {
-  const mappedItems = items.map(item => {
+  const [selectedRows, setSelectedRows] = useState([]);
+
+  const onRowSelect = (rowIndex, allSelectedRows) => {
+    setSelectedRows(allSelectedRows);
+  };
+
+  const mappedItems = items.map((item, index) => {
+    const isCurrentRow = ~selectedRows.indexOf(index);
+
     const fields = Object.keys(item);
 
     return fields.map(field => {
@@ -24,6 +32,7 @@ export default function UsersTable({ items = [], ...rest}) {
           return <User
             avatar={ fieldData.avatar }
             name={ fieldData.name }
+            className={ isCurrentRow && styles['users-table-active-user'] }
           />;
 
         case field === 'chats':
@@ -46,6 +55,7 @@ export default function UsersTable({ items = [], ...rest}) {
     <DataTable
       columns={ TABLE_COLUMNS }
       items={ mappedItems }
+      onRowSelect={ onRowSelect }
       isCheckable
       { ...rest }
     />

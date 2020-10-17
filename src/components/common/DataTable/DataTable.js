@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classnames from 'classnames';
+import pull from 'lodash/pull';
 
 import Table from 'react-bootstrap/Table';
 
@@ -12,9 +13,28 @@ export default function DataTable({
   columns,
   items = [],
   isCheckable = false,
+  onRowSelect: passedRowSelect,
   ...rest
 }) {
   const tableClasses = classnames(styles.table, className);
+
+  const [selectedRows, changeSelectedRows] = useState([]);
+
+  const onRowSelect = (isChecked, name, value) => {
+    const newSelectedRows = [
+      ...selectedRows,
+    ];
+
+    if (isChecked) {
+      newSelectedRows.push(value);
+    } else {  
+      pull(newSelectedRows, value);
+    }
+
+    changeSelectedRows(newSelectedRows);
+
+    passedRowSelect && passedRowSelect(value, newSelectedRows);
+  };
 
   return (
     <Table
@@ -41,30 +61,33 @@ export default function DataTable({
       </thead>
       <tbody>
         {
-          items.map((item, index) => (
-            <tr
-              key={ `data-table-row-${index}` }
-              className={ styles['table-row'] }
-            >
-              {
-                isCheckable && <td>
-                  <Checkbox
-                    value="1"
-                    name="_"
-                  />
-                </td>
-              }
-              {
-                Object.entries(item).map(
-                  ([key, field]) => (
-                    <td key={ key }>
-                      { field }
-                    </td>
+          items.map((item, index) => {
+            return (
+              <tr
+                key={ `data-table-row-${index}` }
+                className={ styles['table-row'] }
+              >
+                {
+                  isCheckable && <td>
+                    <Checkbox
+                      value={ index }
+                      name="_rows[]"
+                      onChange={ onRowSelect }
+                    />
+                  </td>
+                }
+                {
+                  Object.entries(item).map(
+                    ([key, field]) => (
+                      <td key={ key }>
+                        { field }
+                      </td>
+                    )
                   )
-                )
-              }
-            </tr>
-          ))
+                }
+              </tr>
+            );
+          })
         }
       </tbody>
     </Table>
