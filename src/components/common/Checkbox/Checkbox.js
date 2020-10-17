@@ -6,11 +6,13 @@ import Icon from '@/components/common/Icon';
 
 import styles from './Checkbox.module.scss';
 
-export default function Checkbox({ value, name, children, ...rest }) {
+export default function Checkbox({ value, name, children, onChange, ...rest }) {
   const [isChecked, setCheckboxState] = useState(false);
 
   const onCheckboxChange = event => {
     setCheckboxState(event.target.checked);
+
+    onChange && onChange(event.target.checked, name, value);
   };
 
   return (

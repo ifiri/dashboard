@@ -3,7 +3,12 @@ import classnames from 'classnames';
 
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
-import Dropdown from 'react-bootstrap/Dropdown';
+
+import Dropdown, {
+  DropdownItem,
+  DropdownHeader,
+  DropdownDivider
+} from '@/components/common/Dropdown';
 
 import { ReactComponent as SearchIcon } from '@/assets/icons/search.svg';
 import { ReactComponent as FilterIcon } from '@/assets/icons/filter.svg';
@@ -11,44 +16,31 @@ import { ReactComponent as FilterIcon } from '@/assets/icons/filter.svg';
 import styles from './SearchInput.module.scss';
 
 export default function SearchInput({ ...rest }) {
-  const [isFiltersShown, setFiltersVisibility] = useState(false);
-
-  const Toggle = React.forwardRef(({ onClick, ...props }, ref) => {
-    const toggleClasses = classnames({
-      [styles.toggle]: true,
-
-      [styles['toggle-active']]: isFiltersShown,
-    });
-
-    return (
-      <div
-        className={ toggleClasses }
-        ref={ ref }
-        onClick={ onClick }
-      >
-        <FilterIcon height={ 12 } />
-      </div>
-    );
-  });
-
-  const onFiltersToggle = isShown => {
-    setFiltersVisibility(isShown);
-    console.log('::: is', isShown);
-  };
-
   return (
     <InputGroup className={ styles['search-input'] }>
       <Dropdown
-        className={ isFiltersShown ? styles['filters-shown'] : null }
+        header="Добавить фильтр"
         as={ InputGroup.Prepend }
-        onToggle={ onFiltersToggle }
+        toggleContent={ <FilterIcon height={ 12 } /> }
       >
-        <Dropdown.Toggle as={ Toggle } />
-        <Dropdown.Menu>
-          <Dropdown.Item>Action</Dropdown.Item>
-          <Dropdown.Item>Another action</Dropdown.Item>
-          <Dropdown.Item>Something else</Dropdown.Item>
-        </Dropdown.Menu>
+        <DropdownItem>Метка</DropdownItem>
+        <DropdownItem>Дата последнего контакта</DropdownItem>
+        <DropdownItem>Дата подписки</DropdownItem>
+        <DropdownItem>Количество онлайн-чатов</DropdownItem>
+        <DropdownDivider />
+
+        <DropdownHeader variant="secondary">
+          Системные поля
+        </DropdownHeader>
+        <DropdownItem>Имя</DropdownItem>
+        <DropdownItem>Email</DropdownItem>
+        <DropdownItem>Телефон</DropdownItem>
+        <DropdownDivider />
+        <DropdownHeader variant="secondary">
+          Пользовательские поля
+        </DropdownHeader>
+        <DropdownItem>Заинтересован</DropdownItem>
+        <DropdownItem>Тестовое</DropdownItem>
       </Dropdown>
       <FormControl
         type="text"

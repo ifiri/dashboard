@@ -7,6 +7,7 @@ const routes = [
       () =>
         import(/* webpackChunkName: "audience" */ '@/components/screen/Audience')
     ),
+    
     exact: true,
   },
 ];

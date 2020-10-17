@@ -4,8 +4,9 @@ import classnames from 'classnames';
 import PageLayout from '@/components/common/PageLayout';
 import SearchInput from '@/components/common/SearchInput';
 import UsersTable from '@/components/common/UsersTable';
+import Dropdown, { DropdownItem } from '@/components/common/Dropdown';
 
-import Button from 'react-bootstrap/Button';
+import BulkActionsButton from './modules/BulkActionsButton';
 
 import styles from './Audience.module.scss';
 
@@ -34,9 +35,7 @@ export default function Audience() {
       title="Аудитория"
     >
       <div className={ styles.header }>
-        <SearchInput
-
-        />
+        <SearchInput />
 
         <div className={ styles.actions }>
           <div className={ styles.selected }>
@@ -44,11 +43,14 @@ export default function Audience() {
           </div>
 
           <div className={ styles.bulk }>
-            <Button
-              variant="outline-secondary"
+            <Dropdown
+              toggleAs= { BulkActionsButton }
             >
-              Массовые действия
-            </Button>
+              <DropdownItem>Добавить метку</DropdownItem>
+              <DropdownItem>Снять метку</DropdownItem>
+              <DropdownItem>Подписать на рассылку</DropdownItem>
+              <DropdownItem>Отписать от рассылки</DropdownItem>
+            </Dropdown>
           </div>
         </div>
       </div>
@@ -56,7 +58,6 @@ export default function Audience() {
       <UsersTable
         items={ SUBSCRIBERS }
       />
-
     </PageLayout>
   );
 }
