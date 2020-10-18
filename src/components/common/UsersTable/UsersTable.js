@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import DataTable from '@/components/common/DataTable';
 import Icon from '@/components/common/Icon';
+import ReadableDate from '@/components/common/ReadableDate';
 
 import User from './modules/User';
 
@@ -40,14 +41,7 @@ export default function UsersTable({ items = [], ...rest}) {
           return fieldData;
 
         case field === 'subscribedAt':
-          return <React.Fragment>
-            <time className={ styles['users-table-time-readable'] }>
-              2 месяца назад
-            </time>
-            <time>
-              { fieldData }
-            </time>
-          </React.Fragment>
+          return <ReadableDate date={ fieldData } />;
       };
     });
   });

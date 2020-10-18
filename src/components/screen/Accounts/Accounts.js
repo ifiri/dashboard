@@ -6,17 +6,30 @@ import classnames from 'classnames';
 import PageLayout from '@/components/common/PageLayout';
 import Placeholder from '@/components/common/Placeholder';
 // import SearchInput from '@/components/common/SearchInput';
-// import UsersTable from '@/components/common/UsersTable';
+import AccountsTable from '@/components/common/AccountsTable';
 // import Dropdown, { DropdownItem } from '@/components/common/Dropdown';
 
 import styles from './Accounts.module.scss';
 
-const DATA = [
-  //
+const ACCOUNTZ = [
+  {
+    'account': {
+      'type': 'telegram',
+      'project': {
+        'title': 'Проект 1',
+        'thumbnail': 'project-01.png',
+      },
+    },
+    'createdAt': '25.08.2020',
+    'bots': '2',
+    'mailings': '5',
+    'keywords': '19',
+    'chats': '837',
+  },
 ];
 
 export default function Accounts() {
-  const areAccountsExists = !!DATA.length;
+  const areAccountsExists = !!ACCOUNTZ.length;
 
   return (
     <PageLayout
@@ -25,7 +38,11 @@ export default function Accounts() {
       {
         (() => {
           if (areAccountsExists) {
-            return;
+            return (
+              <AccountsTable
+                items={ ACCOUNTZ }
+              />
+            );
           }
 
           return (
