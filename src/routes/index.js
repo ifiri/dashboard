@@ -10,6 +10,15 @@ const routes = [
     
     exact: true,
   },
+  {
+    path: '/accounts',
+    component: loadable(
+      () =>
+        import(/* webpackChunkName: "accounts" */ '@/components/screen/Accounts')
+    ),
+    
+    exact: true,
+  },
 ];
 
 export default routes;
