@@ -1,0 +1,29 @@
+.filters-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.filters-toggle-selected {
+  color: $gray-900;
+}
+
+.filters-toggle-count {
+  position: absolute;
+  text-align: center;
+
+  border-radius: 14px;
+  font-size: 14px;
+  color: $brand-white;
+  background-color: $primary;
+
+  height: 14px;
+  min-width: 14px;
+  padding: 0 4px 0 3px;
+
+  top: -18px;
+  left: calc(100% - 2px);
+
+  line-height: 1;
+}

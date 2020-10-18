@@ -13,6 +13,7 @@ export default function DataTable({
   columns,
   items = [],
   isCheckable = false,
+  placeholder,
   onRowSelect: passedRowSelect,
   ...rest
 }) {
@@ -34,6 +35,50 @@ export default function DataTable({
     changeSelectedRows(newSelectedRows);
 
     passedRowSelect && passedRowSelect(value, newSelectedRows);
+  };
+
+  const renderRows = () => {
+    const columnsCount = Object.keys(columns).length + ( isCheckable ? 1 : 0 );
+    if (!items.length) {
+      return (
+        <tr>
+          <td
+            className={ styles['table-placeholder'] }
+            colSpan={ columnsCount }
+          >
+            { placeholder || 'Не найдено ни одной записи' }
+          </td>
+        </tr>
+      )
+    }
+
+    return items.map((item, index) => {
+      return (
+        <tr
+          key={ `data-table-row-${index}` }
+          className={ styles['table-row'] }
+        >
+          {
+            isCheckable && <td>
+              <Checkbox
+                value={ index }
+                name="_rows[]"
+                onChange={ onRowSelect }
+              />
+            </td>
+          }
+          {
+            Object.entries(item).map(
+              ([key, field]) => (
+                <td key={ key }>
+                  { field }
+                </td>
+              )
+            )
+          }
+        </tr>
+      );
+    })
   };
 
   return (
@@ -59,36 +104,9 @@ export default function DataTable({
           }
         </tr>
       </thead>
+  
       <tbody>
-        {
-          items.map((item, index) => {
-            return (
-              <tr
-                key={ `data-table-row-${index}` }
-                className={ styles['table-row'] }
-              >
-                {
-                  isCheckable && <td>
-                    <Checkbox
-                      value={ index }
-                      name="_rows[]"
-                      onChange={ onRowSelect }
-                    />
-                  </td>
-                }
-                {
-                  Object.entries(item).map(
-                    ([key, field]) => (
-                      <td key={ key }>
-                        { field }
-                      </td>
-                    )
-                  )
-                }
-              </tr>
-            );
-          })
-        }
+        { renderRows() }
       </tbody>
     </Table>
   );

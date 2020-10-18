@@ -25,10 +25,12 @@ $brand-blue: #00baff;
 $brand-gray: #dddddd;
 $gray-100: #FAFAFA;
 $gray-200: #CFCFCF;
+$gray-300: #C4C4C4;
 $gray-400: #929292;
 $gray-700: #F4F4F4;
 $gray-900: #071F27;
-$brand-white: #ffffff;
+$brand-white: #fff;
+$brand-black: #000;
 
 
 
@@ -55,6 +57,7 @@ $transition-function: ease-in-out;
 $font-family-base: $font-family;
 $font-weight-base: $font-weight-common;
 $font-weight-normal: $font-weight-common;
+$font-size-base: rem(14px, $font-size-common);
 
 $primary: $brand-blue;
 
@@ -79,6 +82,7 @@ $btn-font-weight: $font-weight-common;
 $table-head-bg: $gray-100;
 $table-border-width: 0;
 $table-th-font-weight: 400;
+$table-cell-padding: 22px 10px;
 
 $dropdown-border-color: $gray-900;
 $dropdown-padding-y: 0;

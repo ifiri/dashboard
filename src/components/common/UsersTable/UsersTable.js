@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import DataTable from '@/components/common/DataTable';
+import Icon from '@/components/common/Icon';
 
 import User from './modules/User';
 
@@ -56,6 +57,16 @@ export default function UsersTable({ items = [], ...rest}) {
       columns={ TABLE_COLUMNS }
       items={ mappedItems }
       onRowSelect={ onRowSelect }
+      placeholder={
+        <React.Fragment>
+          <Icon
+            className={ styles['users-table-placeholder-icon'] }
+            name="people"
+            width={ 25 }
+          />
+          Не найдено ни одного подписчика
+        </React.Fragment>
+      }
       isCheckable
       { ...rest }
     />

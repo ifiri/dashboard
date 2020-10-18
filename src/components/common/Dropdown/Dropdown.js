@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
-import classnames from 'classnames';
 
 import BootstrapDropdown from 'react-bootstrap/Dropdown';
 
 import DropdownToggle from './modules/DropdownToggle';
 import DropdownHeader from './modules/DropdownHeader';
 
-export default function Dropdown({ as, toggleAs, toggleContent, header, children, ...rest }) {
+export default function Dropdown({
+  as,
+  toggleAs,
+  toggleContent,
+  header,
+  children,
+  ...rest
+}) {
   const [isDropdownShown, setDropdownVisibility] = useState(false);
 
   const onDropdownToggle = isShown => {
@@ -17,6 +23,7 @@ export default function Dropdown({ as, toggleAs, toggleContent, header, children
     <BootstrapDropdown
       as={ as }
       onToggle={ onDropdownToggle }
+      { ...rest }
     >
       <BootstrapDropdown.Toggle
         as={ toggleAs || DropdownToggle }

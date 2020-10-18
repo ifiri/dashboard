@@ -1,1 +1,17 @@
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" 
+	viewBox="0 0 612 792">
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="-1" y="90" width="612" height="612"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path fill="currentColor" d="M17.097,188.535c-22.535-22.536-22.535-59.072,0-81.608c22.535-22.535,59.072-22.535,81.608,0
+			l495.39,495.392c22.534,22.535,22.534,59.072,0,81.607c-22.534,22.535-59.071,22.535-81.607,0L17.097,188.535z"/>
+		<path fill="currentColor" d="M98.72,683.901c-22.535,22.536-59.072,22.536-81.607,0c-22.535-22.536-22.535-59.072,0-81.608
+			l495.391-495.391c22.536-22.535,59.075-22.535,81.609,0c22.534,22.535,22.534,59.072,0,81.607L98.72,683.901z"/>
+	</g>
+</g>
+</svg>
