@@ -18,6 +18,8 @@ import { ReactComponent as PeopleIcon } from '@/assets/icons/people.svg';
 import { ReactComponent as SearchIcon } from '@/assets/icons/search.svg';
 import { ReactComponent as TagIcon } from '@/assets/icons/tag.svg';
 import { ReactComponent as TrashIcon } from '@/assets/icons/trash.svg';
+import { ReactComponent as TelegramIcon } from '@/assets/icons/telegram.svg';
+import { ReactComponent as VkIcon } from '@/assets/icons/vk.svg';
 
 
 export const ICONS_MAP = {
@@ -41,4 +43,6 @@ export const ICONS_MAP = {
   'search': SearchIcon,
   'tag': TagIcon,
   'trash': TrashIcon,
+  'telegram': TelegramIcon,
+  'vk': VkIcon,
 };

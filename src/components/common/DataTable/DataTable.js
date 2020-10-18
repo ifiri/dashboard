@@ -3,8 +3,10 @@ import classnames from 'classnames';
 import pull from 'lodash/pull';
 
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 
 import Checkbox from '@/components/common/Checkbox';
+import Icon from '@/components/common/Icon';
 
 import styles from './DataTable.module.scss';
 
@@ -14,10 +16,13 @@ export default function DataTable({
   items = [],
   isCheckable = false,
   placeholder,
+  actions = [],
   onRowSelect: passedRowSelect,
   ...rest
 }) {
   const tableClasses = classnames(styles.table, className);
+
+  const areActionsExists = !!actions.length;
 
   const [selectedRows, changeSelectedRows] = useState([]);
 
@@ -76,6 +81,25 @@ export default function DataTable({
               )
             )
           }
+          {
+            areActionsExists && <td className={ styles['data-table-actions'] }>
+              {
+                actions.map(action => {
+                  switch (action.type) {
+                    case 'remove':
+                      return <Button
+                        className={ styles['data-table-action'] }
+                        variant="link"
+                        onClick={ action.handler }
+                        key={ action.type }
+                      >
+                        <Icon name="trash" width={ 15 } />
+                      </Button>;
+                  }
+                })
+              }
+            </td>
+          }
         </tr>
       );
     })
@@ -88,7 +112,7 @@ export default function DataTable({
     >
       <thead className={ styles['table-head'] }>
         <tr>
-          { isCheckable && <td></td> }
+          { isCheckable && <th></th> }
 
           {
             Object.entries(columns).map(([key, column]) => (
@@ -102,6 +126,8 @@ export default function DataTable({
               </th>
             ))
           }
+
+          { areActionsExists && <th></th> }
         </tr>
       </thead>
   
