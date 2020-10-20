@@ -1,0 +1,5 @@
+.stepper-step {
+  &[data-current="false"] {
+    display: none;
+  }
+}

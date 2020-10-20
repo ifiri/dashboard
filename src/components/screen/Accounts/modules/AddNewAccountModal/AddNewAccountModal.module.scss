@@ -1,0 +1,136 @@
+.accounts-list {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.account {
+  display: flex;
+  border: 1px solid #C4C4C4;
+  padding: 12px 20px;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.account-icon {
+  margin-right: 14px;
+}
+
+.account-connect-button {
+  margin-left: auto;
+}
+
+
+
+
+
+// second step
+.account-addition {
+
+}
+
+.account-addition-disclaimer {
+  margin-bottom: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.account-addition-type {
+  margin-right: 14px;
+  min-width: 30px;
+}
+
+.account-addition-pages-disclaimer {
+  color: rgba($gray-900, .75);
+}
+
+.account-addition-pages-list {
+  border: 1px solid $gray-300;
+  border-radius: 5px;
+  padding: 0 20px;
+}
+
+.account-addition-pages-item {
+  display: flex;
+  padding: 20px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba($gray-200, .75);
+  }
+}
+
+.account-addition-pages-connect {
+  font-weight: $font-weight-regular;
+  margin-left: auto;
+}
+
+
+
+// tg
+.telegram-bot-add-form {
+  width: 100%;
+}
+
+.telegram-bot-add-form-input {
+  border-color: $gray-300;
+}
+
+.telegram-bot-add-form-footer {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 20px;
+}
+
+.telegram-bot-add-instruction {
+  position: relative;
+  margin-top: 24px;
+
+  height: 115px;
+  overflow: hidden;
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  &[data-opened="true"] {
+    height: auto;
+  }
+}
+
+.telegram-bot-add-instruction-header {
+  font-size: 14px;
+  font-weight: $font-weight-regular;
+}
+.telegram-bot-add-instruction-readmore {
+  padding: 0;
+}
+.telegram-bot-add-instruction-readmore-btn {
+  padding: 0;
+  color: rgba($gray-900, .75);
+  border-bottom: 1px dashed currentColor;
+
+  &:hover,
+  &:focus {
+    color: $gray-900;
+    text-decoration: none;
+  }
+}
+.telegram-bot-add-example {
+  font-size: 10px;
+}
+.telegram-bot-add-token-code {
+  display: inline-block;
+  color: $brand-white;
+  background-color: $primary;
+  border-radius: 2px;
+  padding: 1px 3px;
+}
+.telegram-bot-add-token {
+  font-weight: $font-weight-regular;
+  color: $primary;
+  font-size: 14px;
+}

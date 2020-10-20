@@ -1,4 +1,6 @@
 .header {
+  display: flex;
+
   grid-area: header;
 
   border-bottom: 1px solid $brand-gray;
@@ -8,4 +10,16 @@
 .title {
   line-height: 1;
   margin-bottom: 0;
+}
+
+.header-actions {
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-action {
+  font-weight: $font-weight-medium;
+  font-size: 14px;
 }

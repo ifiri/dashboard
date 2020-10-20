@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import DataTable from '@/components/common/DataTable';
 import ReadableDate from '@/components/common/ReadableDate';
 import Icon from '@/components/common/Icon';
+import ProjectInfo from '@/components/common/ProjectInfo';
 
 import styles from './AccountsTable.module.scss';
 
@@ -13,23 +14,6 @@ const TABLE_COLUMNS = {
   'mailings': 'Авторассылок',
   'keywords': 'Ключевых слов',
   'chats': 'Чатов',
-};
-
-const AccountInfo = ({ info, ...rest }) => {
-  const { type, project } = info;
-
-  return (
-    <div className={ styles['account-info'] }>
-      <Icon name={ type } width= { 30 } />
-
-      <div className={ styles['account-info-project'] }>
-        <img src={ project.thumbnail } width={ 30 } />
-        <span className={ styles['account-info-project-name'] }>
-          { project.title }
-        </span>
-      </div>
-    </div>
-  );
 };
 
 export default function AccountsTable({ items = [], ...rest}) {
@@ -43,7 +27,7 @@ export default function AccountsTable({ items = [], ...rest}) {
 
       switch (true) {
         case field === 'account':
-          return <AccountInfo info={ fieldData } />;
+          return <ProjectInfo info={ fieldData } />;
 
         case field === 'createdAt':
           return <ReadableDate date={ fieldData } />;

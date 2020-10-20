@@ -6,12 +6,13 @@ import PageSidebar from './modules/PageSidebar';
 
 import styles from './PageLayout.module.scss';
 
-export default function PageLayout({ title, headerRender, children }) {
+export default function PageLayout({ title, headerActions, headerRender, children }) {
   return (
     <div className={ styles.layout }>
       <PageHeader
         title={ title }
-        headerRender={ headerRender }
+        render={ headerRender }
+        actions={ headerActions }
       />
 
       <PageSidebar />

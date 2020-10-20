@@ -1,15 +1,17 @@
 import React from 'react';
 import isFunction from 'lodash/isFunction';
 
+import Button from 'react-bootstrap/Button';
+
 import styles from './PageHeader.module.scss';
 
-export default function PageHeader({ title, headerRender }) {
-  const isCustomHeaderRender = isFunction(headerRender);
+export default function PageHeader({ title, render, actions }) {
+  const isCustomHeaderRender = isFunction(render);
 
   if (isCustomHeaderRender) {
     return (
       <header className={ styles.header }>
-        { headerRender.call(this, title) }
+        { render.call(this, title, actions) }
       </header>
     );
   }
@@ -19,6 +21,19 @@ export default function PageHeader({ title, headerRender }) {
       <h1 className={ styles.title }>
         { title }
       </h1>
+
+      <div className={ styles['header-actions']}>
+        { actions.map(({ type, render, handler, ...rest }) => {
+          return <Button
+            key={ type }
+            className={ styles['header-action'] }
+            onClick={ handler }
+            { ...rest }
+          >
+            { render }
+          </Button>;
+        }) }
+      </div>
     </header>
   );
 }

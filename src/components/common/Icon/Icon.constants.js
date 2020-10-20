@@ -20,6 +20,8 @@ import { ReactComponent as TagIcon } from '@/assets/icons/tag.svg';
 import { ReactComponent as TrashIcon } from '@/assets/icons/trash.svg';
 import { ReactComponent as TelegramIcon } from '@/assets/icons/telegram.svg';
 import { ReactComponent as VkIcon } from '@/assets/icons/vk.svg';
+import { ReactComponent as ViberIcon } from '@/assets/icons/viber.svg';
+import { ReactComponent as FacebookIcon } from '@/assets/icons/facebook.svg';
 
 
 export const ICONS_MAP = {
@@ -45,4 +47,6 @@ export const ICONS_MAP = {
   'trash': TrashIcon,
   'telegram': TelegramIcon,
   'vk': VkIcon,
+  'viber': ViberIcon,
+  'facebook': FacebookIcon,
 };

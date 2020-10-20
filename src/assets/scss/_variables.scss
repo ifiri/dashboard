@@ -8,6 +8,7 @@ $font-family: 'Rubik', 'Arial', sans-serif;
 $font-size-common: 16px;
 $font-weight-common: 300;
 $font-weight-regular: 400;
+$font-weight-medium: 500;
 
 
 // Grid
@@ -23,11 +24,11 @@ $breakpoints: (
 // Brand
 $brand-blue: #00baff;
 $brand-gray: #dddddd;
+$gray-lightest: #F4F4F4;
 $gray-100: #FAFAFA;
 $gray-200: #CFCFCF;
 $gray-300: #C4C4C4;
 $gray-400: #929292;
-$gray-700: #F4F4F4;
 $gray-900: #071F27;
 $brand-white: #fff;
 $brand-black: #000;
@@ -60,6 +61,7 @@ $font-weight-normal: $font-weight-common;
 $font-size-base: rem(14px, $font-size-common);
 
 $primary: $brand-blue;
+$secondary: $gray-400;
 
 $border-radius: 5px;
 
@@ -75,9 +77,9 @@ $input-font-size: 14px;
 $input-font-weight: 300;
 $input-placeholder-color: $gray-400;
 
-$secondary: $gray-400;
-
 $btn-font-weight: $font-weight-common;
+$btn-padding-y: 6px;
+$btn-padding-x: 20px;
 
 $table-head-bg: $gray-100;
 $table-border-width: 0;
@@ -88,6 +90,14 @@ $dropdown-border-color: $gray-900;
 $dropdown-padding-y: 0;
 $dropdown-item-padding-y: 11px;
 $dropdown-item-padding-x: 20px;
-$dropdown-link-hover-bg: $gray-700;
+$dropdown-link-hover-bg: $gray-lightest;
 $dropdown-font-size: 14px;
 $dropdown-divider-margin-y: 0;
+
+$modal-backdrop-bg: $gray-900;
+$modal-backdrop-opacity: .75;
+$modal-header-padding-y: 20px;
+$modal-header-padding-x: 20px;
+$modal-inner-padding: 20px 30px;
+$modal-footer-margin-between: 20px;
+$modal-md: 600px;
