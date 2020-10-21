@@ -1,0 +1,23 @@
+.bot-state {
+  color: $gray-400;
+  display: flex;
+  align-items: center;
+}
+
+.bot-state-icon {
+  color: $gray-300;
+}
+
+.bot-state-icon-wrapper {
+  width: 15px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.bot-state-running {
+  color: $primary;
+}
+
+.bot-state-running .bot-state-icon {
+  color: $primary;
+}

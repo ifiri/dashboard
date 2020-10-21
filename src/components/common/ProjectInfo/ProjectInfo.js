@@ -1,14 +1,17 @@
 import React from 'react';
+import classnames from 'classnames';
 
 import Icon from '@/components/common/Icon';
 
 import styles from './ProjectInfo.module.scss';
 
-export default function ProjectInfo({ withType = true, info, ...rest }) {
+export default function ProjectInfo({ className, withType = true, info, ...rest }) {
   const { type, project } = info;
 
+  const infoClasses = classnames(styles['project-info'], className);
+
   return (
-    <article className={ styles['project-info'] }>
+    <article className={ infoClasses }>
       {
         withType && <Icon name={ type } width= { 30 } />
       }

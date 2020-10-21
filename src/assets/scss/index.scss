@@ -21,7 +21,28 @@
       background-color: transparent;
     }
   }
-  
+}
+
+.btn-outline-dark {
+  @include button-outline-variant($gray-900);
+
+  border-color: $gray-300;
+
+  &:not(:disabled):not(.disabled) {
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $gray-900;
+      background-color: transparent;
+      border-color: $gray-900;
+    }
+
+    &:active {
+      color: $black;
+      border-color: $black;
+      background-color: transparent;
+    }
+  }
 }
 
 @import 'fonts';

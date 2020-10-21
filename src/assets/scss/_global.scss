@@ -37,12 +37,17 @@ ul, ol {
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
+
 
 .table td,
 .table th {
   vertical-align: middle;
+}
+
+.form-label {
+  font-weight: $font-weight-regular;
 }
 
 #root {

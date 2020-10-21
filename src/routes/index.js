@@ -19,6 +19,24 @@ const routes = [
     
     exact: true,
   },
+  {
+    path: '/automatization/bots',
+    component: loadable(
+      () =>
+        import(/* webpackChunkName: "automatization-bots" */ '@/components/screen/Bots')
+    ),
+    
+    exact: true,
+  },
+  {
+    path: '/automatization/keywords',
+    component: loadable(
+      () =>
+        import(/* webpackChunkName: "automatization-keywords" */ '@/components/screen/Keywords')
+    ),
+    
+    exact: true,
+  },
 ];
 
 export default routes;

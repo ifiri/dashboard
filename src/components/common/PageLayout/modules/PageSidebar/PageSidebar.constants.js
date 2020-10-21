@@ -8,7 +8,7 @@ export const SIDEBAR_LINKS = [
   },
   {
     label: 'Автоматизация',
-    to: '/automatization',
+    to: '/automatization/bots',
     icon: 'chain',
   },
   {

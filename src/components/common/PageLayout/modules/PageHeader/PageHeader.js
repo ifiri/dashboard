@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 import styles from './PageHeader.module.scss';
 
-export default function PageHeader({ title, render, actions }) {
+export default function PageHeader({ title, render, actions = [] }) {
   const isCustomHeaderRender = isFunction(render);
 
   if (isCustomHeaderRender) {

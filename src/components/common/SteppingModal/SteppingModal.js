@@ -10,6 +10,7 @@ export default function SteppingModal({
   isOpen,
   isClosable,
   onClose,
+  size,
   ...rest
 }) {
   const currentStepData = steps.find(
@@ -17,6 +18,7 @@ export default function SteppingModal({
   );
 
   const isRootStep = !currentStepData.prev;
+  const realSize = currentStepData.size || size;
 
   const gotoPreviousStep = () => setCurrentStep(currentStepData.prev);
 
@@ -26,6 +28,7 @@ export default function SteppingModal({
     <Modal
       isOpen={ isOpen }
       onClose={ onClose }
+      size={ realSize }
     >
       <StepComponent
         currentStep={ currentStep }

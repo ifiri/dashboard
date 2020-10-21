@@ -22,6 +22,8 @@ import { ReactComponent as TelegramIcon } from '@/assets/icons/telegram.svg';
 import { ReactComponent as VkIcon } from '@/assets/icons/vk.svg';
 import { ReactComponent as ViberIcon } from '@/assets/icons/viber.svg';
 import { ReactComponent as FacebookIcon } from '@/assets/icons/facebook.svg';
+import { ReactComponent as WhatsAppIcon } from '@/assets/icons/whatsapp.svg';
+import { ReactComponent as PlusIcon } from '@/assets/icons/plus.svg';
 
 
 export const ICONS_MAP = {
@@ -49,4 +51,6 @@ export const ICONS_MAP = {
   'vk': VkIcon,
   'viber': ViberIcon,
   'facebook': FacebookIcon,
+  'whatsapp': WhatsAppIcon,
+  'plus': PlusIcon,
 };
