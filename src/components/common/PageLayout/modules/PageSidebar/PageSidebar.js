@@ -19,9 +19,9 @@ export default function PageSidebar() {
 
       <Nav className={ styles.nav }>
         {
-          SIDEBAR_LINKS.map(linkProps => 
-            <SidebarLink key={ linkProps.to } { ...linkProps } />
-          )
+          SIDEBAR_LINKS.map(linkProps => {
+            return <SidebarLink key={ linkProps.to } { ...linkProps } />;
+          })
         }
       </Nav>
     </aside>

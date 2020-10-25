@@ -1,0 +1,20 @@
+.sidebar-submenu {
+  color: $gray-900;
+  padding-top: 10px;
+}
+
+.link {
+  position: relative;
+  padding: 8px 0 !important;
+  color: inherit;
+
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+.is-active {
+  color: $primary;
+}

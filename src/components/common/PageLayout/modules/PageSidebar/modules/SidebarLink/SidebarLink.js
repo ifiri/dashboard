@@ -4,25 +4,38 @@ import { Link, useRouteMatch } from 'react-router-dom';
 
 import Icon from '@/components/common/Icon';
 
+import SidebarSubmenu from './modules/SidebarSubmenu';
+
 import styles from './SidebarLink.module.scss';
 
-export default function SidebarLink({ to, label, icon, iconWidth = 16 }) {
-  const match = useRouteMatch(to);
+export default function SidebarLink({ to, match, label, icon, children, iconWidth = 16, className }) {
+  const routeMatch = useRouteMatch(match || to);
 
   const classes = classnames({
     [styles.item]: true,
-    [styles['is-active']]: !!match,
+    [styles['is-active']]: !!routeMatch,
+    [styles['is-iconed']]: !!icon,
+    [className]: !!className,
   });
 
   return (
-    <Link
-      to={ to }
-      className={ classes }
-    >
-      <div className={ styles.icon }>
-        <Icon name={ icon } width={ iconWidth } />
-      </div>
-      { label }
-    </Link>
+    <div className={ classes }>
+      <Link
+        to={ to }
+        className={ styles.link }
+      >
+        {
+          !!icon && <div className={ styles.icon }>
+            <Icon name={ icon } width={ iconWidth } />
+          </div>
+        }
+        
+        { label }
+
+        {
+          !!children && <SidebarSubmenu className={ styles.submenu } items={ children } />
+        }
+      </Link>
+    </div>
   );
 }

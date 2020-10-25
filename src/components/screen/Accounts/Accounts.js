@@ -15,28 +15,26 @@ import AddNewAccountModal from './modules/AddNewAccountModal';
 import styles from './Accounts.module.scss';
 
 const ACCOUNTS = [
-  // {
-  //   'account': {
-  //     'type': 'telegram',
-  //     'project': {
-  //       'title': 'Проект 1',
-  //       'thumbnail': 'project-01.png',
-  //     },
-  //   },
-  //   'createdAt': '25.08.2020',
-  //   'bots': '2',
-  //   'mailings': '5',
-  //   'keywords': '19',
-  //   'chats': '837',
-  // },
+  {
+    'account': {
+      'type': 'telegram',
+      'project': {
+        'title': 'Проект 1',
+        'thumbnail': 'project-01.png',
+      },
+    },
+    'createdAt': '25.08.2020',
+    'bots': '2',
+    'mailings': '5',
+    'keywords': '19',
+    'chats': '837',
+  },
 ];
 
 export default function Accounts() {
   const [isModalOpen, setModalState] = useState(false);
   const closeModal = () => setModalState(false);
   const openModal = () => setModalState(true);
-
-  const [currentStep, setCurrentStep] = useState(0);
 
   const areAccountsExists = !!ACCOUNTS.length;
 
@@ -86,8 +84,6 @@ export default function Accounts() {
         isOpen={ isModalOpen }
         onClose={ closeModal }
       />
-
-      
     </PageLayout>
   );
 }

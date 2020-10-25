@@ -1,0 +1,12 @@
+.keywords-column {
+  color: $gray-900;
+}
+
+.keywords-column-contains {
+  color: $gray-400;
+
+  &::after {
+    content:" ";
+    display: inline;
+  }
+}

@@ -1,0 +1,49 @@
+.select {
+  position: relative;
+}
+
+.select-body {
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+}
+
+.select-label {
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 0;
+}
+
+.select-caption {
+  font-weight: $font-weight-regular;
+  color: $gray-900;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: $label-margin-bottom;
+}
+
+.select-toggle {
+  padding: 8px 20px;
+  color: $gray-400;
+  font-size: 14px;
+  line-height: 1.45;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.select-list {
+  position: relative;
+  overflow: hidden;
+  max-height: 200px;
+}
+
+.select-option {
+  padding: 8px 20px;
+  background-color: $brand-white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($gray-100, 10);
+  }
+}

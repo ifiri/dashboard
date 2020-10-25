@@ -2,6 +2,7 @@
 @import 'variables';
 
 @import "~bootstrap/scss/bootstrap";
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
 
 .btn-outline-secondary {
   @include button-outline-variant($secondary);

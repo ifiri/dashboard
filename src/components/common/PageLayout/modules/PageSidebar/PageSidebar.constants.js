@@ -8,8 +8,23 @@ export const SIDEBAR_LINKS = [
   },
   {
     label: 'Автоматизация',
-    to: '/automatization/bots',
     icon: 'chain',
+    to: '/automatization/bots',
+    match: '/automatization/:id',
+    children: [
+      {
+        label: 'Боты',
+        to: '/automatization/bots',
+      },
+      {
+        label: 'Ключевые слова',
+        to: '/automatization/keywords',
+      },
+      {
+        label: 'Авторассылки',
+        to: '/automatization/automailings',
+      },
+    ]
   },
   {
     label: 'Аудитория',

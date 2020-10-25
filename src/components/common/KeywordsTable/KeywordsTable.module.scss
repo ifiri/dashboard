@@ -1,0 +1,16 @@
+.column-bot {
+  display: flex;
+  align-items: center;
+  color: $gray-400;
+}
+
+.bot-info {
+  color: $gray-900;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: underline;
+}
+
+.bot-info-state {
+  color: $gray-300;
+}

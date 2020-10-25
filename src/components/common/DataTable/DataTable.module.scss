@@ -1,7 +1,7 @@
 .table {
   font-size: 14px;
   width: 100%;
-  display: table;
+  display: block;
 
   &.table-outline {
     border-spacing: 0 20px;
@@ -11,8 +11,8 @@
 
 .table-row,
 .table-head-row {
-  display: table-row;
-  justify-content: space-between;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
   border-bottom: 1px solid rgba($gray-200, .7);
 
@@ -39,8 +39,44 @@
   }
 }
 
-.table-row-active {
-  //
+.table-row-data,
+.table-head-row-data {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.table-row-data {
+  position: relative;
+
+  .table-outline & {
+    border: 1px solid $gray-300;
+    border-radius: 5px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+
+    background-color: rgba($almost-white, .6);
+
+    transition: opacity 250ms ease-in-out;
+  }
+
+  &.is-disabled {
+    &::before {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
 }
 
 .table-placeholder {
@@ -50,9 +86,14 @@
 }
 
 .table-cell,
-.table-head-cell {
-  display: table-cell;
+.table-head-cell,
+.table-switch {
+  display: block;
   padding: $table-cell-padding;
+}
+
+.table-switch {
+  width: 90px;
 }
 
 .table-cell {
@@ -60,24 +101,6 @@
 
   .table-outline & {
     padding: 12px 10px;
-
-    border: 1px solid $gray-300;
-    border-left: none;
-    border-right: none;
-
-    &:first-child {
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-right: none;
-      border-left: 1px solid $gray-300;
-    }
-
-    &:last-child {
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      border-left: none;
-      border-right: 1px solid $gray-300;
-    }
   }
 }
 
@@ -88,6 +111,11 @@
   .table-outline & {
     padding-bottom: 0;
   }
+}
+
+.table-cell-actions {
+  white-space: nowrap;
+  width: 120px;
 }
 
 .table-action {
@@ -105,4 +133,9 @@
   &:not(:last-child) {
     margin-right: 6px;
   }
+}
+
+.is-disabled {
+  pointer-events: none;
+  position: relative;
 }

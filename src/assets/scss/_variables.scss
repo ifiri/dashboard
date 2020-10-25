@@ -24,6 +24,7 @@ $breakpoints: (
 // Brand
 $brand-blue: #00baff;
 $brand-gray: #dddddd;
+$almost-white: #FAFAFA;
 $gray-lightest: #F4F4F4;
 $gray-100: #FAFAFA;
 $gray-200: #CFCFCF;
@@ -69,7 +70,7 @@ $headings-font-weight: $font-weight-regular;
 $headings-color: $gray-900;
 
 $h1-font-size: 22px;
-$input-border-color: $gray-400;
+$input-border-color: $gray-300;
 
 $input-padding-y: rem(6px, $font-size-common);
 $input-padding-x: rem(10px, $font-size-common);
@@ -100,5 +101,8 @@ $modal-header-padding-y: 20px;
 $modal-header-padding-x: 20px;
 $modal-inner-padding: 20px 30px;
 $modal-footer-margin-between: 20px;
-$modal-md: 600px;
+$modal-sm: 550px;
+$modal-md: 580px;
 $modal-lg: 890px;
+
+$label-margin-bottom: 16px;

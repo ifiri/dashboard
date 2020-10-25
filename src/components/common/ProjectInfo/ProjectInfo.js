@@ -5,10 +5,14 @@ import Icon from '@/components/common/Icon';
 
 import styles from './ProjectInfo.module.scss';
 
-export default function ProjectInfo({ className, withType = true, info, ...rest }) {
+export default function ProjectInfo({ className, withType = true, compact = false, info, ...rest }) {
   const { type, project } = info;
 
-  const infoClasses = classnames(styles['project-info'], className);
+  const infoClasses = classnames({
+    [styles['project-info']]: true,
+    [styles['compact']]: !!compact,
+    [className]: !!className,
+  });
 
   return (
     <article className={ infoClasses }>

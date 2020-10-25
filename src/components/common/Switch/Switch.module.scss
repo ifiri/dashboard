@@ -1,0 +1,56 @@
+.switch {
+  margin-bottom: 0;
+  color: $primary;
+}
+
+.is-disabled {
+  color: $gray-300;
+}
+
+.caption {
+  font-weight: $font-weight-regular;
+  margin-bottom: $label-margin-bottom;
+}
+
+.switch-control {
+  > div:first-child {
+    border-radius: 5px !important;
+    background-color: $primary !important;
+    height: 30px !important;
+  }
+
+  > div:nth-child(2) {
+    border-radius: 5px !important;
+    height: 28px !important;
+    height: 28px !important;
+
+    position: relative;
+
+    &::before {
+      content: "on";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: inherit;
+      font-size: 14px;
+      font-weight: $font-weight-regular;
+
+      transition: color 250ms ease-in-out;
+      line-height: 26px;
+
+      width: 100%;
+      text-align: center;
+
+      .is-disabled & {
+        content: "off";
+      }
+    }
+  }
+
+  .is-disabled & {
+    > div:first-child {
+      background-color: $gray-300 !important;
+    }
+  }
+}
