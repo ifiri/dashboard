@@ -37,6 +37,15 @@ const routes = [
     
     exact: true,
   },
+  {
+    path: '/payment',
+    component: loadable(
+      () =>
+        import(/* webpackChunkName: "pay" */ '@/components/screen/Payment')
+    ),
+    
+    exact: true,
+  },
 ];
 
 export default routes;

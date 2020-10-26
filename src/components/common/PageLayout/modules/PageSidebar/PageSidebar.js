@@ -2,8 +2,10 @@ import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 
 import Logo from '@/components/common/Logo';
+import TariffInfo from '@/components/common/TariffInfo';
 
 import SidebarLink from './modules/SidebarLink';
+
 
 import {
   SIDEBAR_LOGO_HEIGHT,
@@ -24,6 +26,8 @@ export default function PageSidebar() {
           })
         }
       </Nav>
+
+      <TariffInfo className={ styles.tariff } />
     </aside>
   );
 }

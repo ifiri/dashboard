@@ -24,17 +24,14 @@ export default function KeywordsTable({ items = [], onDelete, ...rest}) {
 
       switch (true) {
         case field === 'keywords':
-          return <KeywordsColumn keywords={['привет', 'пока', 'тест']} />;
+          return <KeywordsColumn keywords={ fieldData } />;
 
         case field === 'bot':
           return (
             <div className={ styles['column-bot'] }>
               Запустить бот
               <BotInfo
-                info={{
-                  type: 'telegram',
-                  name: 'Новый бот от 22.09.2020',
-                }}
+                info={ fieldData }
                 className={ styles['bot-info'] }
               />
               <Icon name="pause" width={ 12 } className={ styles['bot-info-state'] } />

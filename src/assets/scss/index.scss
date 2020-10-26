@@ -1,50 +1,11 @@
 @import 'functions';
 @import 'variables';
 
-@import "~bootstrap/scss/bootstrap";
-@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+@import '~bootstrap/scss/bootstrap';
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+@import '~rc-slider/assets/index.css';
 
-.btn-outline-secondary {
-  @include button-outline-variant($secondary);
-
-  &:not(:disabled):not(.disabled) {
-    &:hover,
-    &:focus,
-    &.focus {
-      background-color: transparent;
-      color: $gray-900;
-      border-color: $gray-900;
-    }
-
-    &:active {
-      color: $black;
-      border-color: $black;
-      background-color: transparent;
-    }
-  }
-}
-
-.btn-outline-dark {
-  @include button-outline-variant($gray-900);
-
-  border-color: $gray-300;
-
-  &:not(:disabled):not(.disabled) {
-    &:hover,
-    &:focus,
-    &.focus {
-      color: $gray-900;
-      background-color: transparent;
-      border-color: $gray-900;
-    }
-
-    &:active {
-      color: $black;
-      border-color: $black;
-      background-color: transparent;
-    }
-  }
-}
+@import 'overrides';
 
 @import 'fonts';
 @import 'global';

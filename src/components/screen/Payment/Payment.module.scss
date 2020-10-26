@@ -1,0 +1,68 @@
+.tariff {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  color: $gray-900;
+
+  font-size: 18px;
+
+  border-bottom: 1px solid $brand-gray;
+  margin-top: -40px;
+}
+
+.tariff-title {
+  margin-right: 10px;
+}
+
+.tariff-item {
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.tariff-item-date {
+  color: $gray-400;
+}
+
+.selected-tariff {
+  font-size: 18px;
+  color: $gray-900;
+
+  display: flex;
+  justify-content: center;
+}
+
+.selected-tariff-title {
+  margin-right: 10px;
+}
+
+.selected-tariff-item {
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.calculator {
+  font-size: 18px;
+  margin-top: 100px;
+  padding: 0px 30px 80px;
+}
+
+.calculator-results {
+  margin-top: 55px;
+  text-align: center;
+}
+
+.calculator-cta {
+  margin-top: 40px;
+}
+
+.disclaimer {
+  font-size: 18px;
+  display: block;
+  text-align: center;
+}
+
+.active-mark {
+  color: $primary;
+}

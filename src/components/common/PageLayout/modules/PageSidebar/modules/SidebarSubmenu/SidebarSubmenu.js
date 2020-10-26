@@ -4,7 +4,7 @@ import { Link, useRouteMatch } from 'react-router-dom';
 
 import Icon from '@/components/common/Icon';
 
-import SidebarLink from '../../SidebarLink';
+import SidebarLink from '../SidebarLink';
 
 import styles from './SidebarSubmenu.module.scss';
 
@@ -13,7 +13,11 @@ export default function SidebarSubmenu({ items, className }) {
   
   return (
     <div className={ submenuClasses }>
-      { items.map(item => <SidebarLink className={ styles.link } { ...item } />) }
+      { items.map(item => <SidebarLink
+        key={ item.to }
+        className={ styles.link }
+        { ...item }
+      />) }
     </div>
   );
 }

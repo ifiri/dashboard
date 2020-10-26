@@ -1,0 +1,28 @@
+.container {
+  border-top: 1px solid rgba($gray-200, .7);
+
+  font-size: 14px;
+  color: $gray-900;
+
+  padding: 20px;
+  text-align: center;
+
+  background: rgba($primary, 0.05);
+}
+
+.title {
+  font-weight: $font-weight-common;
+  color: $gray-400;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.cta {
+  margin-top: 10px;
+}

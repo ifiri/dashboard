@@ -16,13 +16,10 @@ import styles from './Keywords.module.scss';
 
 const DATA = [
   {
-    'keywords': 'telegram',
+    'keywords': ['привет', 'пока', 'тест'],
     'bot': {
       'type': 'telegram',
-      'project': {
-        'title': 'Проект 1',
-        'thumbnail': '/project-01.png',
-      },
+      'name': 'Новый бот от 22.08.2020'
     },
   },
 ];

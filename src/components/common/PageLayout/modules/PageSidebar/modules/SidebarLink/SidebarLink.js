@@ -4,7 +4,7 @@ import { Link, useRouteMatch } from 'react-router-dom';
 
 import Icon from '@/components/common/Icon';
 
-import SidebarSubmenu from './modules/SidebarSubmenu';
+import SidebarSubmenu from '../SidebarSubmenu';
 
 import styles from './SidebarLink.module.scss';
 
@@ -31,11 +31,13 @@ export default function SidebarLink({ to, match, label, icon, children, iconWidt
         }
         
         { label }
-
-        {
-          !!children && <SidebarSubmenu className={ styles.submenu } items={ children } />
-        }
       </Link>
+      {
+        !!children && <SidebarSubmenu
+          className={ styles.submenu }
+          items={ children }
+        />
+      }
     </div>
   );
 }
