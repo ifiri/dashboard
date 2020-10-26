@@ -94,7 +94,7 @@ export default function Payment() {
           Стоимость ежемесячной подписки зависит от общего кол-ва уникальных подписчиков во всех ботах:
         </p>
 
-        <div className={ styles['calculator'] }>
+        <div className={ styles['calculator-range-wrapper'] }>
           <Tooltipped
             min={ 0 }
             max={ 13 }
