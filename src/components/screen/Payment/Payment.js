@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import classnames from 'classnames';
 
-import Slider, { Range } from 'rc-slider';
+import Slider from 'rc-slider';
 
 import Button from 'react-bootstrap/Button';
+import Tooltip from 'react-bootstrap/Tooltip';
+import Overlay from 'react-bootstrap/Overlay';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 
 import PageLayout from '@/components/common/PageLayout';
 import Icon from '@/components/common/Icon';
@@ -46,13 +49,17 @@ const MARKS = {
   13: 'До 300 000 подписчиков',
 };
 
+const { createSliderWithTooltip } = Slider;
+const Tooltipped = createSliderWithTooltip(Slider);
+
+
 export default function Payment() {
   const [ value, setValue ] = useState(0);
+  const [ show, setShow ] = useState(false);
+  const handleRef = useRef(null);
 
   const MAPPED_MARKS = Object.keys(MARKS).map(key => {
     const mark = MARKS[key];
-
-    console.log(':::', key, CURRENT_TARIFF_MARK);
 
     if (+key === CURRENT_TARIFF_MARK) {
       return {
@@ -88,13 +95,22 @@ export default function Payment() {
         </p>
 
         <div className={ styles['calculator'] }>
-          <Slider
+          <Tooltipped
             min={ 0 }
             max={ 13 }
             marks={ MAPPED_MARKS }
             step={ null }
             onChange={ () => {} }
             defaultValue={ CURRENT_TARIFF_MARK }
+            tipProps={{
+              visible: true,
+            }}
+            tipFormatter={
+              () => <div className={ styles['calculator-tooltip'] }>
+                <span className={ styles['calculator-tooltip-price'] }>5490 р.</span>
+                в месяц
+              </div>
+            }
           />
         </div>
 

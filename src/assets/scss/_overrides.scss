@@ -99,4 +99,22 @@
       color: $gray-900;
     }
   }
+
+  .rc-slider-tooltip {
+    .rc-slider-tooltip-inner {
+      width: 90px;
+      height: 90px;
+      border-radius: 5px;
+      background: linear-gradient($primary, $brand-lightblue);
+      box-shadow: 2px 2px 4px rgba($black, .15);
+    }
+
+    .rc-slider-tooltip-arrow {
+      bottom: -1px;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 10px 6px 0;
+      border-top-color: $brand-lightblue;
+    }
+  }
 }
