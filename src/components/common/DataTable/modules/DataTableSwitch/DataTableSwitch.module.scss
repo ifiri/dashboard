@@ -1,0 +1,8 @@
+.table-switch {
+  min-width: 80px;
+  display: block;
+  padding: $table-cell-padding;
+
+  position: relative;
+  z-index: 100;
+}

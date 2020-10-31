@@ -38,6 +38,15 @@ const routes = [
     exact: true,
   },
   {
+    path: '/automatization/mailings',
+    component: loadable(
+      () =>
+        import(/* webpackChunkName: "automatization-mailings" */ '@/components/screen/Automailings')
+    ),
+    
+    exact: true,
+  },
+  {
     path: '/payment',
     component: loadable(
       () =>

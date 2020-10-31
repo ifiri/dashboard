@@ -1,0 +1,62 @@
+.theme-outline {
+  outline: none;
+}
+
+.table-head-row {
+  background-color: $table-head-bg;
+
+  &.theme-outline {
+    padding-bottom: 22px;
+    background-color: transparent;
+  }
+}
+
+.table-row,
+.table-head-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid rgba($gray-200, .7);
+
+  transition: transform 100ms linear;
+
+  &.theme-outline {
+    border-bottom: 0;
+  }
+}
+
+.table-row {
+  position: relative;
+
+  &.theme-outline {
+    &::after {
+      content: "";
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+
+    background-color: rgba($almost-white, .6);
+
+    transition: opacity 250ms ease-in-out;
+  }
+
+  &.is-disabled {
+    &::before {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.automailings-scheduled-at {
+  border-bottom: 1px dashed currentColor;
+  display: inline;
+  line-height: 1.5;
+  cursor: pointer;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.automailings-row-number {
+  color: $primary;
+}
+
+.mailing-name-column {
+  width: calc(100% - 400px);
+}
+
+.table-group {
+  &:hover {
+    background-color: rgba($primary, .1);
+    border-color: $primary;
+  }
+}
+
+.drag-control {
+  opacity: 0;
+  pointer-events: none;
+  cursor: move;
+
+  .table-group:hover & {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.table-body {
+  margin-top: -20px;
+}
+
+.table-row {
+  padding-top: 20px;
+  padding-top: 20px;
+}

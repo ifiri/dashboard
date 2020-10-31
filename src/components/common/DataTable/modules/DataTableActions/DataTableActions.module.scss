@@ -1,0 +1,24 @@
+.table-actions {
+  white-space: nowrap;
+  text-align: right;
+
+  position: relative;
+  z-index: 100;
+}
+
+.table-action {
+  padding: 2px;
+  color: $gray-300;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:not(:last-child) {
+    margin-right: 6px;
+  }
+}

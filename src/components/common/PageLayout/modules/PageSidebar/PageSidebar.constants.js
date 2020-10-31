@@ -22,7 +22,7 @@ export const SIDEBAR_LINKS = [
       },
       {
         label: 'Авторассылки',
-        to: '/automatization/automailings',
+        to: '/automatization/mailings',
       },
     ]
   },

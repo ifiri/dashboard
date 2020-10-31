@@ -1,0 +1,9 @@
+// TODO component
+.form-footer {
+  margin-top: 60px;
+  text-align: center;
+
+  > *:not(:last-child) {
+    margin-right: 20px;
+  }
+}

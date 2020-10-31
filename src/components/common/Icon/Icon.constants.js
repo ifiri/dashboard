@@ -25,6 +25,7 @@ import { ReactComponent as FacebookIcon } from '@/assets/icons/facebook.svg';
 import { ReactComponent as WhatsAppIcon } from '@/assets/icons/whatsapp.svg';
 import { ReactComponent as PlusIcon } from '@/assets/icons/plus.svg';
 import { ReactComponent as UserIcon } from '@/assets/icons/user.svg';
+import { ReactComponent as DragIcon } from '@/assets/icons/drag.svg';
 
 export const ICONS_MAP = {
   'chain': ChainIcon,
@@ -54,4 +55,5 @@ export const ICONS_MAP = {
   'whatsapp': WhatsAppIcon,
   'plus': PlusIcon,
   'user': UserIcon,
+  'drag': DragIcon,
 };
