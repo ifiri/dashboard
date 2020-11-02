@@ -6,6 +6,11 @@
 
   border-bottom: 1px solid $brand-gray;
   padding: 26px 40px 26px 0;
+
+  &.type-chat {
+    margin-left: -40px;
+    padding-left: 40px;
+  }
 }
 
 .title {

@@ -47,6 +47,15 @@ const routes = [
     exact: true,
   },
   {
+    path: '/chat',
+    component: loadable(
+      () =>
+        import(/* webpackChunkName: "chat" */ '@/components/screen/Chat')
+    ),
+    
+    exact: true,
+  },
+  {
     path: '/payment',
     component: loadable(
       () =>

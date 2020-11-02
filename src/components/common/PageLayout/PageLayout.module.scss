@@ -1,7 +1,11 @@
 .layout {
+  max-width: 2056px;
+  min-width: 1366px;
+  margin: 0 auto;
+  
   display: grid;
   grid-template-columns: 240px 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 75px 1fr;
 
   gap: 0px 40px;
 
@@ -10,4 +14,10 @@
     'sidebar content';
 
   min-height: 100%;
+
+  &.type-chat {
+    grid-template-rows: 75px 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
 }

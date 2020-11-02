@@ -32,6 +32,12 @@
   justify-content: space-between;
 }
 
+.select-toggle-selected {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .select-list {
   position: relative;
   overflow: hidden;
@@ -45,5 +51,10 @@
 
   &:hover {
     background-color: darken($gray-100, 10);
+  }
+
+  &.is-disabled {
+    pointer-events: none;
+    color: $gray-300;
   }
 }

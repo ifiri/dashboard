@@ -40,6 +40,16 @@
   }
 }
 
+.form-control {
+  color: currentColor;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: currentColor;
+  }
+}
+
 .rc-slider {
   height: 18px;
 

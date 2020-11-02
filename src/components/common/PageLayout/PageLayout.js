@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 
 import PageContent from './modules/PageContent';
 import PageHeader from './modules/PageHeader';
@@ -6,20 +7,34 @@ import PageSidebar from './modules/PageSidebar';
 
 import styles from './PageLayout.module.scss';
 
-export default function PageLayout({ title, headerActions, headerRender, children }) {
+export default function PageLayout({
+  title,
+  headerActions,
+  headerRender,
+  type,
+  children
+}) {
+  const componentClasses = classnames({
+    [styles.layout]: true,
+    [styles[`type-${type}`]]: !!type,
+  });
+
   return (
-    <div className={ styles.layout }>
-      <PageHeader
-        title={ title }
-        render={ headerRender }
-        actions={ headerActions }
-      />
+    <div className={ componentClasses }>
+      
 
-      <PageSidebar />
+        <PageHeader
+          title={ title }
+          render={ headerRender }
+          actions={ headerActions }
+          type={ type }
+        />
 
-      <PageContent>
-        { children }
-      </PageContent>
+        <PageSidebar />
+
+        <PageContent type={ type }>
+          { children }
+        </PageContent>
     </div>
   );
 }

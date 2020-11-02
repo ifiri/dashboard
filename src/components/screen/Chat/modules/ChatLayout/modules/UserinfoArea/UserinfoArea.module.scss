@@ -1,0 +1,94 @@
+.userinfo {
+  box-shadow: -6px 0px 10px -2px rgba(196, 196, 196, 0.4);
+
+  z-index: 10;
+
+  position: relative;
+  max-height: calc(100vh - 75px);
+}
+.userinfo-section {
+  padding: 30px 0;
+  min-width: 300px;
+
+  border-bottom: 1px solid rgba(207, 207, 207, 0.7);
+}
+.userinfo-section-title {
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.user-basic {
+  display: flex;
+  align-items: center;
+}
+
+.user-basic-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.user-basic-avatar {
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
+.user-basic-actions {
+  display: flex;
+}
+.user-basic-action {
+  padding: 0;
+
+  border-bottom: 1px dashed currentColor;
+  border-radius: 0;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+    text-decoration: none;
+  }
+
+  + .user-basic-action {
+    margin-left: 20px;
+  }
+
+  &.is-unsubscribe {
+    color: $gray-900;
+
+    &:hover {
+      color: $brand-black;
+    }
+  }
+
+  &.is-delete {
+    color: $brand-red;
+
+    &:hover {
+      color: darken($brand-red, 15%);
+    }
+  }
+}
+
+.user-tag {
+  &:not(:last-child) {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.user-subscriptions {
+  margin-top: 20px;
+}
+
+.user-subscription {
+  &:not(:last-child) {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+

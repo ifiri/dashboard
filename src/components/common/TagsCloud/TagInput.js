@@ -15,15 +15,7 @@ const KeyCodes = {
 
 const delimiters = [KeyCodes.comma, KeyCodes.enter];
 
-export default function TagInput({
-  showTags = true,
-  label,
-  placeholder = 'Добавить тэг',
-  name,
-  className,
-  onAdd = () => {},
-  ...rest
-}) {
+export default function TagInput({ label, placeholder = 'Добавить тэг', name, className, ...rest }) {
   const [tags, setTags] = useState([]);
 
   const componentClasses = classnames(styles['tag-input'], className);
@@ -40,8 +32,6 @@ export default function TagInput({
       ...tags,
       tag
     ]);
-
-    onAdd(tag);
   };
 
   return (
@@ -65,21 +55,17 @@ export default function TagInput({
         { ...rest }
       />
 
-      { 
-        showTags && (
-          <div className={ styles.tags }>
-            {
-              tags.map(tag => (
-                <Tag
-                  id={ tag.id }
-                  text={ tag.text }
-                  key={ tag.id }
-                />
-              ))
-            }
-          </div>
-        )
-      }
+      <div className={ styles.tags }>
+        {
+          tags.map(tag => (
+            <Tag
+              id={ tag.id }
+              text={ tag.text }
+              key={ tag.id }
+            />
+          ))
+        }
+      </div>
     </label>
   );
 }

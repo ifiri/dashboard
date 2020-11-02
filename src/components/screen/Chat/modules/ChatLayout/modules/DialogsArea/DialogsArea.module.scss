@@ -1,0 +1,153 @@
+.dialogs {
+  background: linear-gradient(90deg, $brand-white 0%, $gray-600 100%);
+  box-shadow: 6px 0px 10px -2px rgba(196, 196, 196, 0.4);
+
+  overflow: auto;
+
+  z-index: 10;
+}
+
+// TODO dry
+.filters {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgba(207, 207, 207, 0.7);
+  padding: 20px 40px;
+  height: 60px;
+  align-items: center;
+}
+.filter {
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover {
+    color: #000;
+  }
+
+  &:focus {
+    border-bottom: 0;
+  }
+
+  + .filter {
+    margin-left: auto;
+  }
+}
+.filter-dropdown {
+  border: 1px solid $gray-300;
+}
+.filter-toggle {
+  border-bottom: 1px dashed currentColor;
+
+  :global(.show) & {
+    border-bottom-color: transparent;
+  }
+}
+
+
+.dialogs-list {
+
+}
+
+.dialogs-list-item {
+  display: flex;
+  position: relative;
+  padding: 10px 10px 10px 30px;
+  cursor: pointer;
+  background-color: transparent;
+  height: 80px;
+  align-items: center;
+
+  transition: background 250ms ease-in-out;
+
+  &.is-unread {
+    background-color: rgba($primary, .05);
+  }
+
+  &:hover,
+  &.is-active {
+    background-color: #E6F9FF;
+  }
+}
+
+.dialog-type {
+  min-width: 36px;
+}
+.dialog-user {
+  display: flex;
+  margin-left: 20px;
+  width: 100%;
+}
+.dialog-user-avatar {
+  min-width: 36px;
+  height: 36px;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 20px;
+}
+
+.user-message {
+  display: flex;
+  flex-direction: column;
+
+  width: calc(100% - 110px);
+}
+.user-message-author {
+  margin-bottom: 0;
+}
+.user-message-text {
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+
+.dialog-info {
+
+}
+.dialog-info-meta {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  margin-left: auto;
+
+  width: 100px;
+  text-align: right;
+}
+.dialog-info-unread-count {
+  color: $brand-white;
+  background-color: $primary;
+  border-radius: 10px;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: $font-weight-regular;
+  padding-right: 2px;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+.dialog-info-time {
+  color: $gray-400;
+  font-size: 12px;
+
+  > time {
+    display: inline-block;
+
+    + time {
+      margin-left: 10px;
+    }
+  }
+}
+
+// todo dry
+.placeholder {
+  margin-top: 25vh;
+  color: $gray-lightest;
+}
+
+.placeholder-subtitle {
+  color: $gray-500;
+}

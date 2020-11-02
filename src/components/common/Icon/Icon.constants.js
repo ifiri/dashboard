@@ -25,7 +25,12 @@ import { ReactComponent as FacebookIcon } from '@/assets/icons/facebook.svg';
 import { ReactComponent as WhatsAppIcon } from '@/assets/icons/whatsapp.svg';
 import { ReactComponent as PlusIcon } from '@/assets/icons/plus.svg';
 import { ReactComponent as UserIcon } from '@/assets/icons/user.svg';
+import { ReactComponent as UserFilledIcon } from '@/assets/icons/user-filled.svg';
 import { ReactComponent as DragIcon } from '@/assets/icons/drag.svg';
+import { ReactComponent as InfoIcon } from '@/assets/icons/info.svg';
+import { ReactComponent as SenderIcon } from '@/assets/icons/sender.svg';
+import { ReactComponent as SmileIcon } from '@/assets/icons/smile.svg';
+import { ReactComponent as AttachIcon } from '@/assets/icons/attach.svg';
 
 export const ICONS_MAP = {
   'chain': ChainIcon,
@@ -55,5 +60,10 @@ export const ICONS_MAP = {
   'whatsapp': WhatsAppIcon,
   'plus': PlusIcon,
   'user': UserIcon,
+  'user-filled': UserFilledIcon,
   'drag': DragIcon,
+  'info': InfoIcon,
+  'sender': SenderIcon,
+  'smile': SmileIcon,
+  'attach': AttachIcon,
 };

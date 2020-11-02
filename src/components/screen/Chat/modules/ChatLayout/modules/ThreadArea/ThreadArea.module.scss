@@ -1,0 +1,268 @@
+.thread {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+// TODO dry
+.filters {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgba(207, 207, 207, 0.7);
+  padding: 20px 40px;
+  height: 60px;
+  align-items: center;
+}
+.filter {
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover {
+    color: #000;
+  }
+
+  &:focus {
+    border-bottom: 0;
+  }
+
+  + .filter {
+    margin-left: auto;
+  }
+}
+.filter-dropdown {
+  border: 1px solid $gray-300;
+}
+.filter-toggle {
+  border-bottom: 1px dashed currentColor;
+
+  :global(.show) & {
+    border-bottom-color: transparent;
+  }
+}
+
+.filter-avatar {
+  width: 30px;
+  min-width: 30px;
+  margin-right: 10px;
+  color: $gray-300;
+  object-fit: cover;
+  object-position: center;
+}
+.filter-status-prefix {
+  color: $gray-400;
+  font-weight: $font-weight-regular;
+  border-bottom: 1px solid transparent;
+}
+
+
+
+
+.user-info-toggle {
+  position: relative;
+  padding: 0;
+  color: $gray-300;
+
+  margin-left: 40px;
+  padding-right: 20px;
+  margin-right: -20px;
+
+  transition: color 250ms ease-in-out;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &:hover {
+    color: $gray-400;
+  }
+
+  &.is-active {
+    color: $gray-900;
+  }
+}
+.user-info-toggle-arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -7px;
+  color: currentColor;
+  opacity: 0;
+
+  transition: opacity 250ms ease-in-out;
+
+  .is-active & {
+    opacity: 1;
+  }
+}
+
+
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 0 40px;
+
+  max-height: calc(100%);
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+.chat-date-label {
+  color: $brand-white;
+  background-color: $gray-300;
+  border-radius: 18px;
+  height: 24px;
+  font-size: 12px;
+  font-weight: $font-weight-regular;
+  line-height: 1.5;
+  align-self: center;
+  padding: 2px 20px;
+  margin-top: 20px;
+}
+.chat-message {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-top: 20px;
+
+  align-self: flex-end;
+  margin-left: 50px;
+
+  img {
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: top;
+  }
+
+  &.is-alien {
+    align-self: flex-start;
+    margin-right: 50px;
+    margin-left: 0;
+  }
+}
+.chat-message-text {
+  padding: 8px 50px 8px 20px;
+  line-height: 1.25;
+  font-size: 14px;
+  color: $gray-900;
+  border-radius: 18px;
+  background-color: $gray-700;
+  position: relative;
+
+  .is-image & {
+    padding: 20px 20px 23px;
+  }
+}
+.chat-message-avatar {
+  color: $primary;
+  width: 36px;
+  min-width: 36px;
+  margin-left: 10px;
+  order: 1;
+
+  .is-alien & {
+    margin-left: 0;
+    margin-right: 10px;
+    order: 0;
+  }
+}
+.chat-message-time {
+  color: $gray-400;
+  font-size: 12px;
+  position: absolute;
+  right: 12px;
+  bottom: 4px;
+}
+.chat-message-buffer {
+  min-height: 20px;
+  width: 100%;
+  margin-top: auto;
+}
+
+
+.thread-footer {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  padding: 20px;
+  margin-top: auto;
+  background-color: $gray-lightest;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: -20px;
+    background-color: #fff;
+    z-index: 1;
+    right: 0;
+  }
+}
+.thread-media-controls {
+  white-space: nowrap;
+  margin-right: 20px;
+}
+.thread-footer-send-form {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+.thread-control {
+  display: inline-block;
+  padding: 0;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  + .thread-control {
+    margin-left: 14px;
+  }
+}
+.thread-input {
+  color: $gray-900;
+  resize: none;
+  margin-right: 25px;
+
+  &:focus {
+    color: currentColor;
+  }
+}
+
+
+
+
+
+.userinfo {
+  height: 100%;
+  width: 380px;
+  box-shadow: -6px 0px 10px -2px rgba(196, 196, 196, 0.4);
+}
+
+
+
+
+// todo dry
+.placeholder {
+  margin-top: 25vh;
+  color: $gray-lightest;
+}
+
+.placeholder-subtitle {
+  color: $gray-500;
+}
