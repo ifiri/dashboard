@@ -14,13 +14,15 @@ export default function DataTableCell({
   ...rest
 }) {
   const context = useContext(ThemeContext);
-  const theme = context.theme || context;
+  const theme = (context && context.theme) || context || 'default';
 
   const componentClasses = classnames({
     [styles['table-cell']]: !isHead, 
     [styles['table-head-cell']]: isHead,
 
     [styles[`table-cell-${type}`]]: !!styles[`table-cell-${type}`],
+
+    [styles['table-cell-auto']]: !className && typeof width !== 'undefined',
 
     [styles[`theme-${theme}`]]: !!theme,
 
@@ -30,9 +32,8 @@ export default function DataTableCell({
   return (
     <div
       className={ componentClasses }
-      style={{
-        width: width || 'auto',
-        flexGrow: width ? 0 : 1,
+      style={ width && {
+        width,
       }}
       { ...rest }
     >

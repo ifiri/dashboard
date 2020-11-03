@@ -1,0 +1,32 @@
+.mailing-icon-column {
+  min-width: 85px;
+  text-align: center;
+  color: $gray-400;
+  display: none;
+
+  @media screen and (min-width: 1500px) {
+    display: block;
+  }
+}
+
+.mailing-name-column {
+  width: 200px;
+
+  @media screen and (min-width: 1500px) {
+    width: calc(100% - 950px);
+  }
+}
+
+.mailing-date-column {
+  min-width: 210px;
+  white-space: nowrap;
+}
+
+.mailing-count-column {
+  min-width: 125px;
+  white-space: nowrap;
+}
+
+.mailing-clicks-column {
+  min-width: 80px;
+}

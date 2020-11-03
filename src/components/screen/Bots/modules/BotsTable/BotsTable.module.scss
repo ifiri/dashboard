@@ -1,0 +1,22 @@
+.accounts-table-time-readable {
+  margin-right: 10px;
+}
+
+.type-column {
+  min-width: 50px;
+  max-width: 50px;
+}
+
+.name-column {
+  width: calc(25% - 50px);
+}
+
+.account-column {
+  width: 15%;
+}
+
+.date-column,
+.count-column,
+.state-column {
+  width: 20%;
+}

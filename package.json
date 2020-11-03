@@ -61,6 +61,7 @@
     "react-router-dom": "^5.2.0",
     "react-switch": "^5.0.1",
     "react-tag-input": "^6.4.3",
+    "react-transition-group": "^4.4.1",
     "resolve": "1.15.0",
     "resolve-url-loader": "3.1.1",
     "sass-loader": "8.0.2",

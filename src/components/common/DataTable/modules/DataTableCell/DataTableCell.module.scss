@@ -1,6 +1,5 @@
 .table-cell,
 .table-head-cell {
-  flex-grow: 1;
   display: block;
   padding: $table-cell-padding;
 }
@@ -13,6 +12,11 @@
   }
 }
 
+.table-cell-auto {
+  width: auto;
+  flex-grow: 1;
+}
+
 .table-head-cell {
   text-align: left;
   font-weight: $font-weight-regular;
@@ -23,22 +27,28 @@
   }
 }
 
+.table-cell-check {
+  flex-grow: 0;
+  max-width: 50px;
+  min-width: 50px;
+}
+
 .table-cell-switch {
-  flex-grow: 0 !important;
+  flex-grow: 0;
   max-width: 80px;
   min-width: 80px;
 }
 
 .table-cell-drag {
-  flex-grow: 0 !important;
+  flex-grow: 0;
   max-width: 30px;
   min-width: 30px;
   padding-right: 0;
 }
 
 .table-cell-actions {
-  flex-grow: 0 !important;
-  max-width: 120px;
-  min-width: 120px;
+  flex-grow: 0;
+  max-width: 100px;
+  min-width: 100px;
   margin-left: auto;
 }

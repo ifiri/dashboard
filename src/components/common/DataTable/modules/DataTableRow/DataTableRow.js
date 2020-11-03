@@ -5,9 +5,15 @@ import ThemeContext from '../../ThemeContext';
 
 import styles from './DataTableRow.module.scss';
 
-export default function DataTableRow({ isHead = false, isDisabled = false, children, className, ...rest }) {
+export default function DataTableRow({
+  isHead = false,
+  isDisabled = false,
+  children,
+  className,
+  ...rest
+}) {
   const context = useContext(ThemeContext);
-  const theme = context.theme || context;
+  const theme = (context && context.theme) || context || 'default';
 
   console.log(context);
 

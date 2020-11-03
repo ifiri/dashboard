@@ -31,6 +31,9 @@ import { ReactComponent as InfoIcon } from '@/assets/icons/info.svg';
 import { ReactComponent as SenderIcon } from '@/assets/icons/sender.svg';
 import { ReactComponent as SmileIcon } from '@/assets/icons/smile.svg';
 import { ReactComponent as AttachIcon } from '@/assets/icons/attach.svg';
+import { ReactComponent as DraftIcon } from '@/assets/icons/draft.svg';
+import { ReactComponent as MailSentIcon } from '@/assets/icons/mail-sent.svg';
+import { ReactComponent as ScheduleIcon } from '@/assets/icons/schedule.svg';
 
 export const ICONS_MAP = {
   'chain': ChainIcon,
@@ -66,4 +69,7 @@ export const ICONS_MAP = {
   'sender': SenderIcon,
   'smile': SmileIcon,
   'attach': AttachIcon,
+  'draft': DraftIcon,
+  'mail-sent': MailSentIcon,
+  'schedule': ScheduleIcon,
 };

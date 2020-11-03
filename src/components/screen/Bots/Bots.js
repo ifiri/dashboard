@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 import PageLayout from '@/components/common/PageLayout';
 import Placeholder from '@/components/common/Placeholder';
-import BotsTable from '@/components/common/BotsTable';
 import Icon from '@/components/common/Icon';
 
+import BotsTable from './modules/BotsTable';
 import AddNewBotModal from './modules/AddNewBotModal';
 import DeleteBotModal from './modules/DeleteBotModal';
-
-import styles from './Bots.module.scss';
 
 const DATA = [
   {
@@ -85,14 +82,11 @@ export default function Bots() {
               width={ 114 }
             >
               <div>Создайте свой первый бот в telegram, whats'up, facebook, viber или vkontakte</div>
-              <Button
-                size="lg"
-                variant="primary"
-                className={ styles['add-button'] }
+              <Placeholder.Button
                 onClick={ onAccountAdd }
               >
                 Создать бот
-              </Button>
+              </Placeholder.Button>
             </Placeholder>
           );
         })()

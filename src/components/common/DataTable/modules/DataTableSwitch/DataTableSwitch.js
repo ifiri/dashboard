@@ -22,6 +22,7 @@ export default function DataTableSwitch({
         value={ value }
         name="_disabled[]"
         onSwitch={ onSwitch }
+        className={ styles['switch-element'] }
       />
     </div>
   );

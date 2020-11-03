@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 import PageLayout from '@/components/common/PageLayout';
 import Placeholder from '@/components/common/Placeholder';
-import AccountsTable from '@/components/common/AccountsTable';
 import ProjectInfo from '@/components/common/ProjectInfo';
 import Icon from '@/components/common/Icon';
 
+import AccountsTable from './modules/AccountsTable';
 import AddNewAccountModal from './modules/AddNewAccountModal';
-
-import styles from './Accounts.module.scss';
 
 const ACCOUNTS = [
   {
@@ -69,12 +66,11 @@ export default function Accounts() {
               width={ 216 }
             >
               <div>Добавьте существующий аккаунт telegram, whats’up, facebook, viber или vkontakte, к которому в дальнейшем можно будет привязать бот.</div>
-              <Button
-                size="lg"
-                variant="primary"
-                className={ styles['account-add-button'] }
+              <Placeholder.Button
                 onClick={ onAccountAdd }
-              >Добавить аккаунт</Button>
+              >
+                Добавить аккаунт
+              </Placeholder.Button>
             </Placeholder>
           );
         })()

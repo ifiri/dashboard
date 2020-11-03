@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 import PageLayout from '@/components/common/PageLayout';
 import Placeholder from '@/components/common/Placeholder';
-import KeywordsTable from '@/components/common/KeywordsTable';
 import Icon from '@/components/common/Icon';
 
+import KeywordsTable from './modules/KeywordsTable';
 import AddNewKeywordModal from './modules/AddNewKeywordModal';
 import DeleteKeywordModal from './modules/DeleteKeywordModal';
-
-import styles from './Keywords.module.scss';
 
 const DATA = [
   {
@@ -73,14 +70,11 @@ export default function Keywords() {
               <Placeholder.Subtitle>
                 Например, ваш клиент в своем сообщении напишет слово “стоит”. По этому слову будет автоматически запущен бот, рассказывающий про цену.
               </Placeholder.Subtitle>
-              <Button
-                size="lg"
-                variant="primary"
-                className={ styles['add-button'] }
+              <Placeholder.Button
                 onClick={ onKeywordAdd }
               >
                 Создать ключевое слово
-              </Button>
+              </Placeholder.Button>
             </Placeholder>
           );
         })()

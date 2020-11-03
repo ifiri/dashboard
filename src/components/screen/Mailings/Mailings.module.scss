@@ -1,0 +1,33 @@
+.tabs {
+  border-bottom: 1px solid rgba($gray-200, .7);
+  margin-top: -20px;
+}
+
+.tabs-content {
+  padding-top: 30px;
+}
+
+.tab {
+  color: $gray-900 !important;
+  font-size: 14px;
+  padding: 20px 0 20px;
+  border-bottom: 4px solid transparent;
+
+  transition: color 250ms ease-in-out,
+              border-color 250ms ease-in-out;
+
+  &:global(.active) {
+    color: $primary !important;
+    font-weight: $font-weight-regular;
+
+    border-bottom-color: $primary;
+  }
+
+  
+}
+.tabs-item {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+

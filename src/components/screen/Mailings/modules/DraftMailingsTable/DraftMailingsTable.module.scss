@@ -1,0 +1,17 @@
+.mailing-icon-column {
+  min-width: 85px;
+  max-width: 85px;
+  text-align: center;
+  color: $gray-400;
+
+  display: none;
+
+  @media screen and (min-width: 1500px) {
+    display: block;
+  }
+}
+
+.mailing-column {
+  width: 50%;
+  flex-grow: 0;
+}

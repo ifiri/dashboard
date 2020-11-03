@@ -13,6 +13,8 @@
 }
 
 .switch-control {
+  vertical-align: bottom;
+  
   > div:first-child {
     border-radius: 5px !important;
     background-color: $primary !important;

@@ -1,4 +1,8 @@
-.column-bot {
+.column {
+  width: 50%;
+}
+
+.bot {
   display: flex;
   align-items: center;
   color: $gray-400;
@@ -11,6 +15,6 @@
   text-decoration: underline;
 }
 
-.bot-info-state {
+.bot-state {
   color: $gray-300;
 }

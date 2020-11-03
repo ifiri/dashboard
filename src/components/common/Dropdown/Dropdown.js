@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import classnames from 'classnames';
+import { CSSTransition } from 'react-transition-group';
 
 import BootstrapDropdown from 'react-bootstrap/Dropdown';
 
@@ -28,6 +30,7 @@ export default function Dropdown({
     <BootstrapDropdown
       as={ as }
       onToggle={ onDropdownToggle }
+      show={ isDropdownShown }
       { ...rest }
     >
       <div className={ styles['toggle-wrapper'] }>
@@ -40,17 +43,31 @@ export default function Dropdown({
           bsPrefix={ toggleClassName }
         />
       </div>
-
-      <BootstrapDropdown.Menu className={ menuClassName }>
-        {
-          header && (
-            <DropdownHeader>
-              { header }
-            </DropdownHeader>
-          )
-        }
-        { children }
-      </BootstrapDropdown.Menu>
+      <CSSTransition
+        in={ isDropdownShown }
+        timeout={ 250 }
+        classNames="slide"
+        onEnter={ () => {} }
+        onExited={ () => {} }
+      >
+        <BootstrapDropdown.Menu
+          className={
+            classnames(
+              styles['dropdown-menu'],
+              menuClassName
+            )
+          }
+        >
+          {
+            header && (
+              <DropdownHeader>
+                { header }
+              </DropdownHeader>
+            )
+          }
+          { children }
+        </BootstrapDropdown.Menu>
+      </CSSTransition>
     </BootstrapDropdown>
   );
 };

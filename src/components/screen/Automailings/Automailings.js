@@ -37,12 +37,6 @@ export default function Keywords() {
   const closeModal = () => setModalState(false);
   const openModal = () => setModalState(true);
 
-  // const [isDeleteModalOpen, setDeleteModalState] = useState(false);
-  // const openDeleteModal = () => {
-  //   setDeleteModalState(true);
-  // };
-  // const closeDeleteModal = () => setDeleteModalState(false);
-
   const isDataExists = !!DATA.length;
 
   const onAdd = () => {
@@ -84,14 +78,9 @@ export default function Keywords() {
               width={ 380 }
             >
               Авторассылки позволяют делать серию рассылок сообщений пользователям, где каждая рассылка имеет свое заранее запланированное время отправки.
-              <Button
-                size="lg"
-                variant="primary"
-                className={ styles['add-button'] }
-                onClick={ onAdd }
-              >
+              <Placeholder.Button onClick={ onAdd }>
                 Создать авторассылку
-              </Button>
+              </Placeholder.Button>
             </Placeholder>
           );
         })()

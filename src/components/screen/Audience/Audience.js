@@ -5,9 +5,9 @@ import Button from 'react-bootstrap/Button';
 
 import PageLayout from '@/components/common/PageLayout';
 import SearchInput from '@/components/common/SearchInput';
-import UsersTable from '@/components/common/UsersTable';
 import Dropdown, { DropdownItem } from '@/components/common/Dropdown';
 
+import UsersTable from './modules/UsersTable';
 import FiltersConditions from './modules/FiltersConditions';
 import BulkActionsButton from './modules/BulkActionsButton';
 

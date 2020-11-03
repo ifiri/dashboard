@@ -13,7 +13,7 @@ export default function DataTableGroup({
   ...rest
 }) {
   const context = useContext(ThemeContext);
-  const theme = context.theme || context;
+  const theme = (context && context.theme) || context || 'default';
 
   const componentClasses = classnames({
     [styles['table-group']]: !isHead,
