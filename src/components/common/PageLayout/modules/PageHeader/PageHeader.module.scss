@@ -28,4 +28,12 @@
 .header-action {
   font-weight: $font-weight-medium;
   font-size: 14px;
+
+  &.type-cancel {
+    font-weight: $font-weight-common;
+  }
+
+  + .header-action {
+    margin-left: 28px;
+  }
 }

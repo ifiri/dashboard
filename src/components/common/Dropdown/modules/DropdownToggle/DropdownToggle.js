@@ -13,6 +13,8 @@ const DropdownToggle = React.forwardRef(({
   const toggleClasses = classnames({
     [styles['dropdown-toggle']]: true,
     [styles['dropdown-toggle-active']]: isActive,
+
+    [className]: !!className,
   });
 
   return (

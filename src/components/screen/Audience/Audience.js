@@ -5,10 +5,10 @@ import Button from 'react-bootstrap/Button';
 
 import PageLayout from '@/components/common/PageLayout';
 import SearchInput from '@/components/common/SearchInput';
+import FiltersConditions from '@/components/common/FiltersConditions';
 import Dropdown, { DropdownItem } from '@/components/common/Dropdown';
 
 import UsersTable from './modules/UsersTable';
-import FiltersConditions from './modules/FiltersConditions';
 import BulkActionsButton from './modules/BulkActionsButton';
 
 import styles from './Audience.module.scss';

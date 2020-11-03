@@ -23,6 +23,7 @@ $breakpoints: (
 
 // Brand
 $brand-blue: #00baff;
+$brand-navy: #3D4963;
 $brand-lightblue: #00DDFF;
 $brand-gray: #dddddd;
 $almost-white: #FAFAFA;
@@ -69,6 +70,8 @@ $font-size-base: rem(14px, $font-size-common);
 
 $primary: $brand-blue;
 $secondary: $gray-400;
+$danger: $brand-red;
+$red: $brand-red;
 
 $border-radius: 5px;
 

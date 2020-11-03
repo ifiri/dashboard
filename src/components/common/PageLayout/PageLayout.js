@@ -21,20 +21,18 @@ export default function PageLayout({
 
   return (
     <div className={ componentClasses }>
-      
+      <PageHeader
+        title={ title }
+        render={ headerRender }
+        actions={ headerActions }
+        type={ type }
+      />
 
-        <PageHeader
-          title={ title }
-          render={ headerRender }
-          actions={ headerActions }
-          type={ type }
-        />
+      <PageSidebar />
 
-        <PageSidebar />
-
-        <PageContent type={ type }>
-          { children }
-        </PageContent>
+      <PageContent type={ type }>
+        { children }
+      </PageContent>
     </div>
   );
 }

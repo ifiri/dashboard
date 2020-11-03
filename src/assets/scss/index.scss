@@ -9,31 +9,4 @@
 
 @import 'fonts';
 @import 'global';
-
-
-
-// animations
-.slide-enter {
-  display: block;
-  opacity: 0;
-  transform: translateY(-10px), scale(0.9);
-}
-.slide-enter-active {
-  opacity: 1;
-  transform: translateX(0), scale(1);
-  transition: opacity 250ms ease-out, transform 250ms ease-out;
-}
-.slide-exit {
-  display: block;
-  opacity: 1 !important;
-  transform: translateX(0), scale(1) !important;
-  transition: opacity 250ms ease-out, transform 250ms ease-out;
-}
-.slide-exit-active {
-  opacity: 0 !important;
-  transform: translateY(-10px), scale(0.9) !important;
-  transition: opacity 250ms ease-out, transform 250ms ease-out;
-}
-.slide-exit-done {
-  display: none;
-}
+@import 'animations';

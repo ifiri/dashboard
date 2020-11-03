@@ -19,6 +19,7 @@ export default function Select({
   selectable = true,
   children,
   onChange = () => {},
+  external = false,
   className,
   ...rest
 }) {
@@ -83,7 +84,12 @@ export default function Select({
     setSelectState(false);
   };
 
-  const componentClasses = classnames(styles['select'], className);
+  const componentClasses = classnames({
+    [styles['select']]: true,
+    [styles['is-opened']]: isOpened,
+    [styles['is-external']]: external,
+    [className]: !!className,
+  });
 
   return (
     <div className={ componentClasses }>
@@ -109,7 +115,10 @@ export default function Select({
         </label>
         {
           isOpened && (
-            <div className={ styles['select-list'] } ref={ items }>
+            <div
+              className={ styles['select-list'] }
+              ref={ items }
+            >
               {
                 finalizedOptions.map((option, index) => {
                   return (

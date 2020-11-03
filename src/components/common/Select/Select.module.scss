@@ -5,6 +5,11 @@
 .select-body {
   border: 1px solid #C4C4C4;
   border-radius: 5px;
+
+  .is-external.is-opened & {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 .select-label {
@@ -30,18 +35,34 @@
 
   display: flex;
   justify-content: space-between;
+
+  transition: color 250ms ease-in-out;
 }
 
 .select-toggle-selected {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  color: $gray-900;
 }
 
 .select-list {
   position: relative;
   overflow: hidden;
   max-height: 200px;
+
+  .is-external & {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    border: 1px solid #C4C4C4;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    border-top: none;
+  }
 }
 
 .select-option {

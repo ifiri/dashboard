@@ -34,6 +34,9 @@ import { ReactComponent as AttachIcon } from '@/assets/icons/attach.svg';
 import { ReactComponent as DraftIcon } from '@/assets/icons/draft.svg';
 import { ReactComponent as MailSentIcon } from '@/assets/icons/mail-sent.svg';
 import { ReactComponent as ScheduleIcon } from '@/assets/icons/schedule.svg';
+import { ReactComponent as ArrowRightIcon } from '@/assets/icons/arrow-right.svg';
+import { ReactComponent as PeopleFilledIcon } from '@/assets/icons/people-filled.svg';
+import { ReactComponent as BracketsIcon } from '@/assets/icons/brackets.svg';
 
 export const ICONS_MAP = {
   'chain': ChainIcon,
@@ -72,4 +75,7 @@ export const ICONS_MAP = {
   'draft': DraftIcon,
   'mail-sent': MailSentIcon,
   'schedule': ScheduleIcon,
+  'arrow-right': ArrowRightIcon,
+  'people-filled': PeopleFilledIcon,
+  'brackets': BracketsIcon,
 };

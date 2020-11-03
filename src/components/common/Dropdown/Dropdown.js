@@ -41,6 +41,7 @@ export default function Dropdown({
           content={ toggleContent }
           isActive={ isDropdownShown }
           bsPrefix={ toggleClassName }
+          className={ toggleClassName }
         />
       </div>
       <CSSTransition

@@ -9,11 +9,8 @@ import Dropdown, {
   DropdownHeader,
   DropdownDivider
 } from '@/components/common/Dropdown';
-
-import { ReactComponent as SearchIcon } from '@/assets/icons/search.svg';
-import { ReactComponent as FilterIcon } from '@/assets/icons/filter.svg';
-
-import FiltersToggle from './modules/FiltersToggle';
+import FiltersToggle from '@/components/common/FiltersToggle';
+import Icon from '@/components/common/Icon';
 
 import styles from './SearchInput.module.scss';
 
@@ -27,6 +24,7 @@ export default function SearchInput({ ...rest }) {
         as={ InputGroup.Prepend }
         toggleContent={
           <FiltersToggle
+            className={ styles['filters-toggle'] }
             filtersCount={ 1 }
           />
         }
@@ -62,7 +60,7 @@ export default function SearchInput({ ...rest }) {
 
       <InputGroup.Append>
         <div className={ styles['search-icon'] }>
-          <SearchIcon height={ 18 } />
+          <Icon name="search" height={ 18 } />
         </div>
       </InputGroup.Append>
     </InputGroup>

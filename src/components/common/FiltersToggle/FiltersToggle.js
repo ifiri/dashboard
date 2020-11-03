@@ -5,17 +5,28 @@ import { ReactComponent as FilterIcon } from '@/assets/icons/filter.svg';
 
 import styles from './FiltersToggle.module.scss';
 
-export default function FiltersToggle ({ filtersCount, ...rest }) {
+export default function FiltersToggle ({
+  filtersCount,
+  className,
+  countClassName,
+  ...rest
+}) {
   const toggleClasses = classnames({
     [styles['filters-toggle']]: true,
     [styles['filters-toggle-selected']]: !!filtersCount,
+
+    [className]: !!className,
   });
 
   return (
     <div className={ toggleClasses }>
       {
         !!filtersCount && (
-          <div className={ styles['filters-toggle-count'] }>
+          <div
+            className={
+              classnames(styles['filters-toggle-count'], countClassName)
+            }
+          >
             { filtersCount }
           </div>
         )

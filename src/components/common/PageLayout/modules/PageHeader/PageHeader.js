@@ -7,6 +7,19 @@ import Button from 'react-bootstrap/Button';
 
 import styles from './PageHeader.module.scss';
 
+const getActionVariant = (type) => {
+  switch (true) {
+    case type === 'publish':
+      return 'danger';
+
+    case type === 'cancel':
+      return 'outline-dark';
+
+    default:
+      return 'primary';
+  }
+};
+
 export default function PageHeader({ title, render, type, actions = [] }) {
   const componentClasses = classnames({
     [styles.header]: true,
@@ -15,10 +28,35 @@ export default function PageHeader({ title, render, type, actions = [] }) {
 
   const isCustomHeaderRender = isFunction(render);
 
+  
+
+  const renderActions = () => actions.map(
+    ({ type, render, handler, ...rest }) => {
+      const variant = getActionVariant(type);
+
+      return <Button
+        key={ type }
+        className={
+          classnames(
+            styles['header-action'],
+            styles[`type-${type}`],
+          )
+        }
+        variant={ variant }
+        onClick={ handler }
+        { ...rest }
+      >
+        { render }
+      </Button>;
+    }
+  );
+
   if (isCustomHeaderRender) {
+    const prerenderedActions = renderActions();
+
     return (
       <header className={ componentClasses }>
-        { render.call(this, title, actions) }
+        { render.call(this, title, prerenderedActions, actions) }
       </header>
     );
   }
@@ -30,16 +68,7 @@ export default function PageHeader({ title, render, type, actions = [] }) {
       </h1>
 
       <div className={ styles['header-actions']}>
-        { actions.map(({ type, render, handler, ...rest }) => {
-          return <Button
-            key={ type }
-            className={ styles['header-action'] }
-            onClick={ handler }
-            { ...rest }
-          >
-            { render }
-          </Button>;
-        }) }
+        { renderActions() }
       </div>
     </header>
   );
